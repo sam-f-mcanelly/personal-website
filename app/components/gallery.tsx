@@ -15,6 +15,7 @@ const images = [
   "/images/gallery/overlanding/IMG_4208.jpg",
   "/images/gallery/overlanding/IMG_4455.jpg",
   "/images/gallery/overlanding/IMG_4088.jpg",
+  "/images/gallery/overlanding/IMG_3933.jpg",
 
   // general
   "/images/gallery/general/IMG_2878.jpg",

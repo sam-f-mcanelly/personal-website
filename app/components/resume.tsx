@@ -65,7 +65,7 @@ export default function Resume() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-0 top-0 h-[calc(100%-8rem)] w-px bg-purple-500/30" />
+            <div className="absolute left-0 top-0 h-[calc(100%-32rem)] w-px bg-purple-500/30" />
 
             {/* Timeline items */}
             <div className="space-y-8">
