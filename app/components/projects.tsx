@@ -12,7 +12,7 @@ export default function Projects() {
             title="Personal Website"
             description="A Next.js application that provides a window into my career and life."
             image="/images/projects/personal_website.png"
-            link="https://github.com"
+            link="https://github.com/sam-f-mcanelly/personal-website/tree/main"
             tags={["Next.js", "Docker", "React", "TypeScript", "TailwindCSS"]}
           />
           <ProjectCard
