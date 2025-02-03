@@ -9,7 +9,7 @@ export default function Header() {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-8">
           <div className="w-48 h-48 relative overflow-hidden rounded-full border-4 border-neutral-accent/30">
             <Image
-              src="/images/IMG_5132.jpg"
+              src="/images/header/IMG_5132.jpg"
               alt="Sam McAnelly"
               fill
               className="object-cover"

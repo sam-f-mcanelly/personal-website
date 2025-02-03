@@ -11,14 +11,14 @@ export default function Projects() {
           <ProjectCard
             title="Personal Website"
             description="A Next.js application that provides a window into my career and life."
-            image="/images/personal_website.png"
+            image="/images/projects/personal_website.png"
             link="https://github.com"
             tags={["Next.js", "Docker", "React", "TypeScript", "TailwindCSS"]}
           />
           <ProjectCard
             title="Crypto Tax Calculator"
             description="A transaction managment and tax reporting software for hodlers who prefer to self custody their assets."
-            image="/images/bitcoin_tracker.png"
+            image="/images/projects/bitcoin_tracker.png"
             link="https://github.com"
             tags={[
               "React",

@@ -72,19 +72,19 @@ export default function Interests() {
           <YouTubeCard
             title="Fly4Life Latest Video"
             channelName="Fly4Life"
-            thumbnailUrl="/placeholder.svg?height=180&width=320"
+            thumbnailUrl="/images/youtube/fly4life_thumbnail.jpg"
             videoLink="https://www.youtube.com/@Fly4Life"
           />
           <YouTubeCard
             title="Coffeezilla Latest Video"
             channelName="Coffeezilla"
-            thumbnailUrl="/placeholder.svg?height=180&width=320"
+            thumbnailUrl="/images/youtube/coffeezilla_thumbnail.jpg"
             videoLink="https://www.youtube.com/@Coffeezilla"
           />
           <YouTubeCard
             title="Dirt Lifestyle Latest Video"
             channelName="Dirt Lifestyle"
-            thumbnailUrl="/placeholder.svg?height=180&width=320"
+            thumbnailUrl="/images/youtube/dirtlifestyle_thumbnail.jpg"
             videoLink="https://www.youtube.com/@DirtLifestyle"
           />
         </div>

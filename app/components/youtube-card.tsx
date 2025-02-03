@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Play } from "lucide-react";
 
 interface YouTubeCardProps {
   title: string;
@@ -25,11 +24,6 @@ export default function YouTubeCard({
           height={180}
           className="w-full object-cover"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-black/60 rounded-full p-2">
-            <Play className="w-8 h-8 text-white" />
-          </div>
-        </div>
       </div>
       <div className="p-4">
         <h3 className="text-sm font-semibold text-neutral-heading mb-1">
