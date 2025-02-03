@@ -5,7 +5,7 @@ import { Github, Linkedin, Twitter, Youtube } from "lucide-react";
 export default function Header() {
   return (
     <section id="intro" className="py-4 md:py-6 lg:py-8">
-      <div className="container px-4 md:px-6 max-w-5xl">
+      <div className="container px-4 md:px-24 max-w-5xl">
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-8">
           <div className="w-48 h-48 relative overflow-hidden rounded-full border-4 border-neutral-accent/30">
             <Image

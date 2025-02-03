@@ -7,7 +7,7 @@ export default function Projects() {
         <h2 className="text-3xl font-bold mb-6 text-neutral-heading">
           Projects
         </h2>
-        <div className="space-y-6">
+        <div className="space-y-8 py-5">
           <ProjectCard
             title="Personal Website"
             description="A Next.js application that provides a window into my career and life."

@@ -50,7 +50,7 @@ export default function Gallery() {
   }, [isHovering]);
 
   return (
-    <div className="bg-black/60 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-slate-200 border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl dark:border-slate-800">
+    <div className="bg-black/60 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl dark:border-slate-800">
       <h2 className="text-3xl font-bold mb-6 text-neutral-heading">Gallery</h2>
       <div
         ref={scrollRef}

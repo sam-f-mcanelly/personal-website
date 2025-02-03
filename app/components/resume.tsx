@@ -58,7 +58,7 @@ export default function Resume() {
   return (
     <div className="lg:w-2/3">
       <section id="about" className="py-8">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-4">
           <h2 className="text-3xl font-bold mb-12 text-neutral-heading">
             Professional Experience
           </h2>
@@ -68,7 +68,7 @@ export default function Resume() {
             <div className="absolute left-0 top-0 h-[calc(100%-8rem)] w-px bg-purple-500/30" />
 
             {/* Timeline items */}
-            <div className="space-y-24">
+            <div className="space-y-8">
               {timelineItems.map((item, index) => (
                 <div key={index} className="relative pl-16">
                   {/* Timeline marker with dates */}
@@ -87,9 +87,9 @@ export default function Resume() {
                   {/* Content card */}
                   <div className="relative">
                     <div className="absolute left-0 top-0 w-full h-full bg-neutral-accent/5 rounded-lg transform rotate-1 z-0" />
-                    <div className="relative z-10 bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200 border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
+                    <div className="relative z-10 bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
                       <div className="flex items-start gap-4">
-                        <div className="p-2 bg-purple-500/20 rounded-lg border border-slate-200 border-purple-500/30 dark:border-slate-800">
+                        <div className="p-2 bg-purple-500/20 rounded-lg border border-purple-500/30 dark:border-slate-800">
                           {item.icon}
                         </div>
                         <div className="flex-1">
@@ -134,9 +134,9 @@ export default function Resume() {
                 {/* Content card */}
                 <div className="relative">
                   <div className="absolute left-0 top-0 w-full h-full bg-neutral-accent/5 rounded-lg transform rotate-1 z-0" />
-                  <div className="relative z-10 bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200 border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
+                  <div className="relative z-10 bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
                     <div className="flex items-start gap-4">
-                      <div className="p-2 bg-purple-500/20 rounded-lg border border-slate-200 border-purple-500/30 dark:border-slate-800">
+                      <div className="p-2 bg-purple-500/20 rounded-lg border border-purple-500/30 dark:border-slate-800">
                         <GraduationCap className="w-8 h-8" />
                       </div>
                       <div>
@@ -160,7 +160,7 @@ export default function Resume() {
                 Skills
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200 border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
+                <div className="bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
                   <h3 className="text-lg font-semibold mb-2 text-neutral-heading">
                     Amazon Web Systems
                   </h3>
@@ -174,14 +174,14 @@ export default function Resume() {
                     ].map((skill) => (
                       <span
                         key={skill}
-                        className="px-2 py-1 bg-orange-500/20 rounded-full text-sm text-orange-300 border border-slate-200 border-orange-500/50 dark:border-slate-800"
+                        className="px-2 py-1 bg-orange-500/20 rounded-full text-sm text-orange-300 borderborder-orange-500/50 dark:border-slate-800"
                       >
                         {skill}
                       </span>
                     ))}
                   </div>
                 </div>
-                <div className="bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200 border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
+                <div className="bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
                   <h3 className="text-lg font-semibold mb-2 text-neutral-heading">
                     Languages
                   </h3>
@@ -195,14 +195,14 @@ export default function Resume() {
                     ].map((skill) => (
                       <span
                         key={skill}
-                        className="px-2 py-1 bg-blue-500/20 rounded-full text-sm text-blue-300 border border-slate-200 border-blue-500/50 dark:border-slate-800"
+                        className="px-2 py-1 bg-blue-500/20 rounded-full text-sm text-blue-300 border border-blue-500/50 dark:border-slate-800"
                       >
                         {skill}
                       </span>
                     ))}
                   </div>
                 </div>
-                <div className="bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200 border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
+                <div className="bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
                   <h3 className="text-lg font-semibold mb-2 text-neutral-heading">
                     Frameworks
                   </h3>
@@ -210,14 +210,14 @@ export default function Resume() {
                     {["Dagger", "Spring", "Docker", "CDK"].map((skill) => (
                       <span
                         key={skill}
-                        className="px-2 py-1 bg-red-500/20 rounded-full text-sm text-red-300 border border-slate-200 border-red-500/50 dark:border-slate-800"
+                        className="px-2 py-1 bg-red-500/20 rounded-full text-sm text-red-300 border border-red-500/50 dark:border-slate-800"
                       >
                         {skill}
                       </span>
                     ))}
                   </div>
                 </div>
-                <div className="bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-200 border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
+                <div className="bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
                   <h3 className="text-lg font-semibold mb-2 text-neutral-heading">
                     Areas of Focus
                   </h3>
@@ -230,7 +230,7 @@ export default function Resume() {
                     ].map((skill) => (
                       <span
                         key={skill}
-                        className="px-2 py-1 bg-green-500/20 rounded-full text-sm text-green-300 border border-slate-200 border-green-500/50 dark:border-slate-800"
+                        className="px-2 py-1 bg-green-500/20 rounded-full text-sm text-green-300 border border-green-500/50 dark:border-slate-800"
                       >
                         {skill}
                       </span>
