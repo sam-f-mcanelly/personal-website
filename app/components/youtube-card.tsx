@@ -3,14 +3,14 @@ import Link from "next/link";
 
 interface YouTubeCardProps {
   title: string;
-  channelName: string;
+  channelDescription: string;
   thumbnailUrl: string;
   videoLink: string;
 }
 
 export default function YouTubeCard({
   title,
-  channelName,
+  channelDescription: channelName,
   thumbnailUrl,
   videoLink,
 }: YouTubeCardProps) {

@@ -4,12 +4,20 @@ import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 
 const images = [
-  "/images/placeholder.svg?height=400&width=600",
-  "/images/placeholder.svg?height=400&width=600",
-  "/images/placeholder.svg?height=400&width=600",
-  "/images/placeholder.svg?height=400&width=600",
-  "/images/placeholder.svg?height=400&width=600",
-  "/images/placeholder.svg?height=400&width=600",
+  // skydiving
+  "/images/gallery/skydiving/IMG_2322.jpg",
+  "/images/gallery/skydiving/IMG_3429.jpg",
+  "/images/gallery/skydiving/IMG_4072.jpg",
+  "/images/gallery/skydiving/IMG_2363.jpg",
+
+  // off roading
+  "/images/gallery/overlanding/IMG_3426.jpg",
+  "/images/gallery/overlanding/IMG_4208.jpg",
+  "/images/gallery/overlanding/IMG_4455.jpg",
+  "/images/gallery/overlanding/IMG_4088.jpg",
+
+  // general
+  "/images/gallery/general/IMG_2878.jpg",
 ];
 
 export default function Gallery() {

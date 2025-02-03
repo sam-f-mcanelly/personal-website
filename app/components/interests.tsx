@@ -70,20 +70,20 @@ export default function Interests() {
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <YouTubeCard
-            title="Fly4Life Latest Video"
-            channelName="Fly4Life"
+            title="Fly4Life"
+            channelDescription="Team Fly4Life is a world-renowned group of professional skydivers dedicated to advancing flight skills and safety through coaching and camps. Their focus on dynamic flying and immersive training resonates with my own passion for skydiving, as I continually seek to push my skills and explore new dimensions of human flight."
             thumbnailUrl="/images/youtube/fly4life_thumbnail.jpg"
-            videoLink="https://www.youtube.com/@Fly4Life"
+            videoLink="https://www.youtube.com/@TEAMFLY4LIFE"
           />
           <YouTubeCard
-            title="Coffeezilla Latest Video"
-            channelName="Coffeezilla"
-            thumbnailUrl="/images/youtube/coffeezilla_thumbnail.jpg"
-            videoLink="https://www.youtube.com/@Coffeezilla"
+            title="Peter Santenello"
+            channelDescription="Peter Santenello is a YouTuber known for immersive, documentary-style videos that explore cultures and communities worldwide. His unscripted storytelling highlights everyday people through authentic, human-centered insights."
+            thumbnailUrl="/images/youtube/santenello_thumbnail.jpg"
+            videoLink="https://www.youtube.com/@PeterSantenello"
           />
           <YouTubeCard
-            title="Dirt Lifestyle Latest Video"
-            channelName="Dirt Lifestyle"
+            title="Dirt Lifestyle"
+            channelDescription="Dirt Lifestyle is a YouTube channel created by Nate Pickel, focusing on fabricating unique vehicles and testing them off-road. The channel emphasizes that “life is too short to stay on asphalt,” reflecting a passion for adventure and hands-on automotive projects. His channel has inspired some of my own projects."
             thumbnailUrl="/images/youtube/dirtlifestyle_thumbnail.jpg"
             videoLink="https://www.youtube.com/@DirtLifestyle"
           />
