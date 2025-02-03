@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+# Sam McAnelly's Portfolio Website
+
+This is a portfolio website built with Next.js, React, and Tailwind CSS.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone this repository
+2. Install dependencies with \`npm install\`
+3. Run the development server with \`npm run dev\`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Self-hosting Images
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To use your own images in the portfolio:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Place your images in the \`public/images\` folder.
+2. Reference your images in the code using the path \`/images/your-image-name.jpg\`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Using Self-hosted Images in Placeholders
 
-## Learn More
+To use your self-hosted images in place of the placeholder.svg:
 
-To learn more about Next.js, take a look at the following resources:
+1. In components that use Image or img tags, replace the src attribute:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   From:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+\`\`\`jsx
 
-## Deploy on Vercel
+   src="/placeholder.svg?height=400&width=600"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+\`\`\`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   To:
+
+\`\`\`jsx
+
+   src="/images/your-image-name.jpg"
+
+\`\`\`
+
+2. Make sure to provide appropriate alt text for accessibility.
+3. Adjust the width and height props of the Image component if necessary to match your image dimensions.
+
+Example:
+
+\`\`\`jsx
+
+<Image
+
+src="/images/project-thumbnail.jpg"
+
+alt="Project Thumbnail"
+
+width={600}
+
+height={400}
+
+className="object-cover rounded-lg"
+
+/>
+
+\`\`\`
+
+Remember to optimize your images for web use to ensure fast loading times.
+
+## Customizing Content
+
+To customize the content of your portfolio:
+
+1. Edit the components in the \`app/components\` directory.
+2. Update the data in each component to reflect your personal information, projects, and experiences.
+3. Modify the styling in the component files or in \`app/globals.css\` to match your preferred design.
+
+## Deployment
+
+This project is set up to be easily deployed on Vercel. Simply connect your GitHub repository to Vercel for automatic deployments.
+
+For other hosting options, build the project with \`npm run build\` and deploy the \`out\` directory to your preferred static hosting service.
