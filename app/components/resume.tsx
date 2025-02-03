@@ -5,6 +5,7 @@ import {
   Waves,
   GraduationCap,
 } from "lucide-react";
+import Image from "next/image";
 
 const timelineItems = [
   {
@@ -12,7 +13,7 @@ const timelineItems = [
     endDate: "Present",
     title: "Amazon Web Services",
     role: "Software Development Engineer II",
-    icon: <Cloud className="w-8 h-8" />,
+    icon: "/images/resume/aws_icon.jpg",
     description: [
       "Led design and implementation of major features in a developer tools platform for automated infrastructure creation.",
       "Spearheaded a cross-team initiative to automate deployment of regional infrastructure.",
@@ -24,7 +25,7 @@ const timelineItems = [
     endDate: "Oct 2021",
     title: "Amazon.com",
     role: "Software Development Engineer I",
-    icon: <Package className="w-8 h-8" />,
+    icon: "/images/resume/aws_icon.jpg",
     description: [
       "Built a service to reduce processing in the Multi-Channel Fulfillment order intake system.",
       "Developed a feature for sellers to set preferences package carriers in off-Amazon channels.",
@@ -36,7 +37,7 @@ const timelineItems = [
     endDate: "Aug 2018",
     title: "Amazon.com",
     role: "Software Development Engineer Intern",
-    icon: <ShoppingCart className="w-8 h-8" />,
+    icon: "/images/resume/aws_icon.jpg",
     description: [
       "Improved loading times of an internal website by implementing paginated for large data tables.",
       "Built a web page showing audit data about product sourcing cost calculations.",
@@ -47,7 +48,7 @@ const timelineItems = [
     endDate: "Aug 2017",
     title: "Garmin",
     role: "Software Engineer Intern",
-    icon: <Waves className="w-8 h-8" />,
+    icon: "/images/resume/garmin_logo.png",
     description: [
       "Designed and implemented a forward collision alarm for fish finders using front-facing scanning sonar.",
     ],
@@ -65,7 +66,7 @@ export default function Resume() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-0 top-0 h-[calc(100%-32rem)] w-px bg-purple-500/30" />
+            <div className="absolute left-0 top-12 h-[calc(100%-36rem)] w-px bg-green-500/30" />
 
             {/* Timeline items */}
             <div className="space-y-8">
@@ -76,9 +77,16 @@ export default function Resume() {
                     <div className="text-sm text-neutral-accent mb-2 whitespace-nowrap">
                       {item.endDate}
                     </div>
-                    <div className="w-4 h-4 rounded-full bg-purple-500 border-4 border-purple-900/50" />
+                    <div
+                      className={`w-4 h-4 rounded-full border-4 ${
+                        item.endDate === "Present"
+                          ? "bg-yellow-500 border-yellow-900/50"
+                          : "bg-red-500 border-red-900/50"
+                      }`}
+                    />
+
                     <div className="flex-grow w-px bg-purple-500/30" />
-                    <div className="w-4 h-4 rounded-full bg-purple-500 border-4 border-purple-900/50" />
+                    <div className="w-4 h-4 rounded-full bg-green-500 border-4 border-purple-900/50" />
                     <div className="text-sm text-neutral-accent mt-2 whitespace-nowrap">
                       {item.startDate}
                     </div>
@@ -89,8 +97,14 @@ export default function Resume() {
                     <div className="absolute left-0 top-0 w-full h-full bg-neutral-accent/5 rounded-lg transform rotate-1 z-0" />
                     <div className="relative z-10 bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
                       <div className="flex items-start gap-4">
-                        <div className="p-2 bg-purple-500/20 rounded-lg border border-purple-500/30 dark:border-slate-800">
-                          {item.icon}
+                        <div className="rounded-lg bg-white">
+                          <Image
+                            src={item.icon}
+                            alt={item.title}
+                            width={50} // Adjust size as needed
+                            height={50}
+                            className="rounded-md object-cover"
+                          />
                         </div>
                         <div className="flex-1">
                           <h3 className="text-xl font-semibold text-neutral-heading">
@@ -123,9 +137,9 @@ export default function Resume() {
                   <div className="text-sm text-neutral-accent mb-2 whitespace-nowrap">
                     May 2019
                   </div>
-                  <div className="w-4 h-4 rounded-full bg-purple-500 border-4 border-purple-900/50" />
+                  <div className="w-4 h-4 rounded-full bg-red-500 border-4 border-red-900/50" />
                   <div className="flex-grow w-px bg-purple-500/30" />
-                  <div className="w-4 h-4 rounded-full bg-purple-500 border-4 border-purple-900/50" />
+                  <div className="w-4 h-4 rounded-full bg-green-500 border-4 border-green-900/50" />
                   <div className="text-sm text-neutral-accent mt-2 whitespace-nowrap">
                     Aug 2013
                   </div>
@@ -136,8 +150,14 @@ export default function Resume() {
                   <div className="absolute left-0 top-0 w-full h-full bg-neutral-accent/5 rounded-lg transform rotate-1 z-0" />
                   <div className="relative z-10 bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
                     <div className="flex items-start gap-4">
-                      <div className="p-2 bg-purple-500/20 rounded-lg border border-purple-500/30 dark:border-slate-800">
-                        <GraduationCap className="w-8 h-8" />
+                      <div className="bg-white rounded-lg">
+                        <Image
+                          src="/images/resume/osu_seal.png"
+                          alt="OSU Seal"
+                          width={50} // Adjust size as needed
+                          height={50}
+                          className="rounded-md object-cover"
+                        />
                       </div>
                       <div>
                         <h3 className="text-xl font-semibold text-neutral-subheading">

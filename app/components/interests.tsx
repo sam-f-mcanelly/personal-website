@@ -51,7 +51,7 @@ export default function Interests() {
           <SpotifyPodcastCard
             title="The Pomp Podcast"
             imageUrl="https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/b2/1b/00/b21b00c5-6cae-448d-ed1a-5c9a6d0d92e6/mza_6126566848874237960.jpeg/300x300bb.webp"
-            spotifyLink="https://open.spotify.com/show/2QwpFjzJ0ZteqmMqw2xIfA"
+            spotifyLink="https://open.spotify.com/show/0bn8XQHWGxXULjhp1jRmOJ"
             buttonType="spotify"
           />
           <SpotifyPodcastCard
