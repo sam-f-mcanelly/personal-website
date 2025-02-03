@@ -25,7 +25,7 @@ const timelineItems = [
     endDate: "Oct 2021",
     title: "Amazon.com",
     role: "Software Development Engineer I",
-    icon: "/images/resume/aws_icon.jpg",
+    icon: "/images/resume/amazon_retail_logo.png",
     description: [
       "Built a service to reduce processing in the Multi-Channel Fulfillment order intake system.",
       "Developed a feature for sellers to set preferences package carriers in off-Amazon channels.",
@@ -37,7 +37,7 @@ const timelineItems = [
     endDate: "Aug 2018",
     title: "Amazon.com",
     role: "Software Development Engineer Intern",
-    icon: "/images/resume/aws_icon.jpg",
+    icon: "/images/resume/amazon_retail_logo.png",
     description: [
       "Improved loading times of an internal website by implementing paginated for large data tables.",
       "Built a web page showing audit data about product sourcing cost calculations.",
@@ -80,7 +80,7 @@ export default function Resume() {
                     <div
                       className={`w-4 h-4 rounded-full border-4 ${
                         item.endDate === "Present"
-                          ? "bg-yellow-500 border-yellow-900/50"
+                          ? "bg-yellow-500 border-yellow-900/50 animate-pulse"
                           : "bg-red-500 border-red-900/50"
                       }`}
                     />

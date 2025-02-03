@@ -1,4 +1,3 @@
-
 # Sam McAnelly's Portfolio Website
 
 This is a portfolio website built with Next.js, React, and Tailwind CSS.
@@ -73,6 +72,4 @@ To customize the content of your portfolio:
 
 ## Deployment
 
-This project is set up to be easily deployed on Vercel. Simply connect your GitHub repository to Vercel for automatic deployments.
-
-For other hosting options, build the project with \`npm run build\` and deploy the \`out\` directory to your preferred static hosting service.
+Build the project with `npm run build` and deploy the `out` directory to your preferred static hosting service.
