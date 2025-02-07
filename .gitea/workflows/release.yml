@@ -20,15 +20,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: "18"
+          cache: "npm"
       - run: echo "👉 📦 Installing Dependencies"
-      - name: Install Dependencies 
+      - name: Install Dependencies
         run: |
-          npm run ci
+          npm ci
       - run: echo "🔧 Building the project"
       - name: Build application
         run: |
           npm run build
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      
