@@ -8,15 +8,12 @@ jobs:
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ gitea.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by Gitea!"
-      - run: echo "👉 📦 Installing Node dependencies"
+      - run: echo "👉 📦 Installing Node"
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
-      - name: Install dependencies
-        run: |
-          npm ci
       - run: echo "🔎 The name of your branch is ${{ gitea.ref }} and your repository is ${{ gitea.repository }}."
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -26,6 +23,10 @@ jobs:
         run: |
           ls ${{ gitea.workspace }}
       - run: echo "🔧 Building the project"
+      - run: echo "👉 📦 Installing Dependencies"
+      - name: Install Dependencies 
+        run: |
+          npm run ci
       - name: Build application
         run: |
           npm run build
