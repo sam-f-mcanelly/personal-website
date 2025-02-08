@@ -44,7 +44,7 @@ USER nextjs
 EXPOSE 3064
 
 # Set host to allow connections from outside the container
-ENV HOSTNAME "0.0.0.0"
+ENV HOSTNAME="0.0.0.0"
 
 # Start the application using next start
 CMD ["npm", "start"]

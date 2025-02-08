@@ -32,10 +32,10 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           config-inline: |
-            [registry."gitea:5000"]
+            [registry."registry:5000"]
               http = true
               insecure = true
           context: .
           file: ./Dockerfile
           push: true
-          tags: gitea:5000/sam/personal-website:latest
+          tags: registry:5000/sam/personal-website:latest
