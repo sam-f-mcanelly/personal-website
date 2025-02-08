@@ -43,4 +43,3 @@ jobs:
           push: true
           tags: registry:5000/sam/personal-website:latest
           network: gitea
-          allow: network.gitea
