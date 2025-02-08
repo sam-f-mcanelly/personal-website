@@ -23,6 +23,10 @@ jobs:
       - name: 👉 📦 Installing Dependencies
         run: |
           npm ci
+      - name: 🫨 Configure Docker daemon
+        run: |
+          echo '{"insecure-registries":["registry:5000"]}' | sudo tee /etc/docker/daemon.json
+          sudo systemctl restart docker
       - name: 🔧 Build application
         run: |
           npm run build
@@ -34,5 +38,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: http://registry:5000/sam/personal-website:latest
+          tags: registry:5000/sam/personal-website:latest
           registry: registry:5000

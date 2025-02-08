@@ -8,9 +8,11 @@ const timelineItems = [
     role: "Software Development Engineer II",
     icon: "/images/resume/aws_icon.jpg",
     description: [
-      "Led design and implementation of major features in a developer tools platform for automated infrastructure creation.",
-      "Spearheaded a cross-team initiative to automate deployment of regional infrastructure.",
-      "Provided guidance on best practices for maintaining and creating infrastructure as code.",
+      "Led design and implementation of major features in a developer tools platform that automated infrastructure creation across AWS regions",
+      "Spearheaded a cross-team initiative to automate regional infrastructure deployment, significantly reducing time-to-market for new AWS region launches",
+      "Developed automated validation systems to detect and alert teams about regressions affecting regional expansion",
+      "Established best practices and provided technical guidance to teams across Amazon for infrastructure-as-code implementation",
+      "Collaborated with product teams to design scalable solutions for multi-region deployment strategies",
     ],
   },
   {
@@ -20,9 +22,10 @@ const timelineItems = [
     role: "Software Development Engineer I",
     icon: "/images/resume/amazon_retail_logo.png",
     description: [
-      "Built a service to reduce processing in the Multi-Channel Fulfillment order intake system.",
-      "Developed a feature for sellers to set preferences package carriers in off-Amazon channels.",
-      "Maintained back-end and front-end web services for optimizing product sourcing prices.",
+      "Architected and implemented a service optimization for Multi-Channel Fulfillment that eliminated over 600,000 daily service calls",
+      "Led the development of a carrier preference feature for off-Amazon channel fulfillment, coordinating with five teams",
+      "Completed the carrier preference project eight weeks after initial request, meeting aggressive timeline requirements",
+      "Built and maintained full-stack services for vendor price optimization in Amazon's retail sourcing platform",
     ],
   },
   {
@@ -32,8 +35,9 @@ const timelineItems = [
     role: "Software Development Engineer Intern",
     icon: "/images/resume/amazon_retail_logo.png",
     description: [
-      "Improved loading times of an internal website by implementing paginated for large data tables.",
-      "Built a web page showing audit data about product sourcing cost calculations.",
+      "Enhanced performance of internal tooling by implementing pagination for large-scale data tables",
+      "Developed a web interface for auditing product sourcing cost calculations",
+      "Created detailed documentation for the auditing system to facilitate future maintenance",
     ],
   },
   {
@@ -43,7 +47,10 @@ const timelineItems = [
     role: "Software Engineer Intern",
     icon: "/images/resume/garmin_logo.png",
     description: [
-      "Designed and implemented a forward collision alarm for fish finders using front-facing scanning sonar.",
+      "Designed and implemented a forward collision warning system for marine electronics",
+      "Developed algorithms for processing front-facing scanning sonar data in real-time",
+      "Created test suites to validate collision detection accuracy",
+      "Collaborated with UX team to design intuitive alert mechanisms",
     ],
   },
 ];
@@ -99,9 +106,13 @@ export default function Timeline() {
                     <p className="text-sm text-neutral-accent mb-4">
                       {item.role}
                     </p>
-                    <ul className="list-disc list-inside space-y-1 text-neutral-text">
+                    <ul className="list-disc ml-2 space-y-1 text-neutral-text">
                       {item.description.map((desc, i) => (
-                        <li key={i}>{desc}</li>
+                        <li key={i} className="pl-2">
+                          <span className="-ml-2">
+                            {desc}
+                          </span>
+                        </li>
                       ))}
                     </ul>
                   </div>

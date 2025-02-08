@@ -8,14 +8,7 @@ export default function Projects() {
           Projects
         </h2>
         <div className="space-y-8 py-5">
-          <ProjectCard
-            title="Personal Website"
-            description="A Next.js application that provides a window into my career and life."
-            image="/images/projects/personal_website.png"
-            link="https://github.com/sam-f-mcanelly/personal-website/tree/main"
-            tags={["Next.js", "Docker", "React", "TypeScript", "TailwindCSS"]}
-          />
-          <ProjectCard
+        <ProjectCard
             title="Crypto Tax Calculator"
             description="A transaction managment and tax reporting software for hodlers who prefer to self custody their assets."
             image="/images/projects/bitcoin_tracker.png"
@@ -30,6 +23,13 @@ export default function Projects() {
               "Docker",
               "Dagger",
             ]}
+          />
+          <ProjectCard
+            title="Personal Website"
+            description="A Next.js application that provides a window into my career and life."
+            image="/images/projects/personal_website.png"
+            link="https://github.com/sam-f-mcanelly/personal-website/tree/main"
+            tags={["Next.js", "Docker", "React", "TypeScript", "TailwindCSS"]}
           />
         </div>
       </section>
