@@ -29,10 +29,12 @@ jobs:
       - name: 🔧 Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
-        config-inline: |
-          [registry."registry:5000"]
-            http = true
-            insecure = true
+          driver-opts: |
+            network=gitea
+          config-inline: |
+            [registry."registry:5000"]
+              http=true
+              insecure=true
       - name: 🔧 Build and Push Docker Image
         uses: docker/build-push-action@v6
         with:
@@ -40,4 +42,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: registry:5000/sam/personal-website:latest
-          network: host
+          network: gitea
+          allow: network.gitea
