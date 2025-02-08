@@ -40,4 +40,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: registry:5000/sam/personal-website:latest
-          registry: registry:5000
+          network: host
