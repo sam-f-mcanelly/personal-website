@@ -31,11 +31,8 @@ jobs:
       - name: 🔧 Build and Push Docker Image
         uses: docker/build-push-action@v6
         with:
-          config-inline: |
-            [registry."registry:5000"]
-              http = true
-              insecure = true
           context: .
           file: ./Dockerfile
           push: true
-          tags: registry:5000/sam/personal-website:latest
+          tags: http://registry:5000/sam/personal-website:latest
+          registry: registry:5000
