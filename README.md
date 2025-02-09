@@ -1,9 +1,9 @@
 # Sam McAnelly's Portfolio Website
 
-[![Version](https://img.shields.io/github/package-json/v/sam-mcanelly/personal-website)](https://github.com/sam-mcanelly/personal-website)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/sam-mcanelly/personal-website/release.yml)](https://github.com/sam-mcanelly/personal-website/actions)
-[![License](https://img.shields.io/github/license/sam-mcanelly/personal-website)](https://github.com/sam-mcanelly/personal-website/blob/main/LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/sam-mcanelly/personal-website)](https://github.com/sam-mcanelly/personal-website/commits/main)
+[![Version](https://img.shields.io/github/package-json/v/sam-f-mcanelly/personal-website)](https://github.com/sam-f-mcanelly/personal-website)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/sam-f-mcanelly/personal-website/release.yml)](https://github.com/sam-f-mcanelly/personal-website/actions)
+[![License](https://img.shields.io/github/license/sam-f-mcanelly/personal-website)](https://github.com/sam-f-mcanelly/personal-website/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/sam-f-mcanelly/personal-website)](https://github.com/sam-f-mcanelly/personal-website/commits/main)
 
 A modern, responsive portfolio website built with Next.js, React, and Tailwind CSS.
 
