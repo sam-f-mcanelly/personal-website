@@ -96,7 +96,7 @@ export default function LiveBackground() {
       ref={canvasRef}
       className="fixed top-0 left-0 w-full h-full -z-10"
       style={{
-        background: "linear-gradient(45deg, #0f172a, #1e293b, #334155)",
+        background: "linear-gradient(45deg,rgb(7, 10, 18),rgb(21, 29, 42),rgb(27, 35, 45))",
       }}
     />
   );

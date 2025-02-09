@@ -18,19 +18,19 @@ export default function Interests() {
           <AmazonBookCard
             title="Designing Data-Intensive Applications"
             author="Martin Kleppmann"
-            imageUrl="https://c.media-amazon.com/images/I/91rkMMsmkRL._SL1500_.jpg"
+            imageUrl="/images/books/system_design.jpg"
             amazonLink="https://www.amazon.com/dp/1449373321"
           />
           <AmazonBookCard
             title="The Bitcoin Standard"
             author="Saifedean Ammous"
-            imageUrl="https://c.media-amazon.com/images/I/81gcXeUeOFL._SL1500_.jpg"
+            imageUrl="/images/books/bitcoin_standard.jpg"
             amazonLink="https://www.amazon.com/dp/1119473861"
           />
           <AmazonBookCard
             title="Little Brother"
             author="Cory Doctorow"
-            imageUrl="https://c.media-amazon.com/images/I/7180ja9QqeL._SL1500_.jpg"
+            imageUrl="/images/books/little_brother.jpg"
             amazonLink="https://www.amazon.com/dp/0765323117"
           />
         </div>
@@ -44,19 +44,19 @@ export default function Interests() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <SpotifyPodcastCard
             title="Lex Fridman Podcast"
-            imageUrl="https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/3e/e3/9c/3ee39c89-de08-47a6-7f3d-3849cef6d255/mza_16657851278549137484.png/300x300bb.webp"
+            imageUrl="/images/podcasts/lex.jpg"
             spotifyLink="https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL"
             buttonType="spotify"
           />
           <SpotifyPodcastCard
             title="The Pomp Podcast"
-            imageUrl="https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/b2/1b/00/b21b00c5-6cae-448d-ed1a-5c9a6d0d92e6/mza_6126566848874237960.jpeg/300x300bb.webp"
+            imageUrl="/images/podcasts/pomp.jpg"
             spotifyLink="https://open.spotify.com/show/0bn8XQHWGxXULjhp1jRmOJ"
             buttonType="spotify"
           />
           <SpotifyPodcastCard
             title="This Week in Tech"
-            imageUrl="https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/9b/96/ac/9b96ac54-6ef1-9380-43ad-83f3066155a0/mza_10914428610214068995.jpg/300x300bb.webp"
+            imageUrl="/images/podcasts/twit.webp"
             applePodcastLink="https://podcasts.apple.com/us/podcast/this-week-in-tech-mp3/id73329404"
             buttonType="apple"
           />
