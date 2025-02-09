@@ -1,9 +1,17 @@
 name: Build and Release
 run-name: ${{ gitea.actor }} has triggered Build and Release 🚀
-on: [push]
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - '*.md'
+      - 'docs/**'
 
 jobs:
-  Explore-Gitea-Actions:
+  Release:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ gitea.event_name }} event."
