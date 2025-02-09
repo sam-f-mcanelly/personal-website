@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export default function Header() {
   return (
@@ -42,7 +42,7 @@ export default function Header() {
                 <Github className="w-6 h-6" />
                 <span className="sr-only">GitHub</span>
               </Link>
-              <Link
+              {/* <Link
                 href="https://x.com/sammcanelly"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -59,7 +59,7 @@ export default function Header() {
               >
                 <Youtube className="w-6 h-6" />
                 <span className="sr-only">YouTube</span>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
