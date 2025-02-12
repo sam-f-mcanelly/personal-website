@@ -106,10 +106,10 @@ export default function Timeline() {
                     <p className="text-sm text-neutral-accent mb-4">
                       {item.role}
                     </p>
-                    <ul className="list-disc ml-2 space-y-1 text-neutral-text">
+                    <ul className="list-disc -ml-8 space-y-1 text-neutral-text">
                       {item.description.map((desc, i) => (
-                        <li key={i} className="pl-2">
-                          <span className="-ml-2">
+                        <li key={i}>
+                          <span>
                             {desc}
                           </span>
                         </li>
