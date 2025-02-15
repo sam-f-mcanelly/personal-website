@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect } from 'react';
 
 interface Particle {
   x: number;
@@ -18,7 +18,7 @@ export default function LiveBackground() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     canvas.width = window.innerWidth;
@@ -60,7 +60,7 @@ export default function LiveBackground() {
       });
 
       // Draw connecting lines
-      ctx.strokeStyle = "rgba(128, 128, 128, 0.05)";
+      ctx.strokeStyle = 'rgba(128, 128, 128, 0.05)';
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -84,10 +84,10 @@ export default function LiveBackground() {
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -96,7 +96,7 @@ export default function LiveBackground() {
       ref={canvasRef}
       className="fixed top-0 left-0 w-full h-full -z-10"
       style={{
-        background: "linear-gradient(45deg, #0f172a, #1e293b, #334155)",
+        background: 'linear-gradient(45deg, #0f172a, #1e293b, #334155)',
       }}
     />
   );

@@ -6,7 +6,9 @@
     "dev": "next dev --port 3064",
     "build": "next build",
     "start": "next start --port 3064",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",

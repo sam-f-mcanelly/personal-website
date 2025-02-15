@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface YouTubeCardProps {
   title: string;
@@ -18,7 +18,7 @@ export default function YouTubeCard({
     <div className="bg-black/60 backdrop-blur-sm rounded-lg overflow-hidden transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]">
       <div className="relative">
         <Image
-          src={thumbnailUrl || "/placeholder.svg"}
+          src={thumbnailUrl || '/placeholder.svg'}
           alt={title}
           width={320}
           height={180}
@@ -26,9 +26,7 @@ export default function YouTubeCard({
         />
       </div>
       <div className="p-4">
-        <h3 className="text-sm font-semibold text-neutral-heading mb-1">
-          {title}
-        </h3>
+        <h3 className="text-sm font-semibold text-neutral-heading mb-1">{title}</h3>
         <p className="text-xs text-neutral-accent mb-2">{channelName}</p>
         <Link
           href={videoLink}

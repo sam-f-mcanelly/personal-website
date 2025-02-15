@@ -1,19 +1,15 @@
-import AmazonBookCard from "./amazon-book-card";
-import SpotifyPodcastCard from "./spotify-podcast-card";
-import YouTubeCard from "./youtube-card";
+import AmazonBookCard from './amazon-book-card';
+import SpotifyPodcastCard from './spotify-podcast-card';
+import YouTubeCard from './youtube-card';
 
 export default function Interests() {
   return (
     <section id="interests" className="py-8">
-      <h2 className="text-3xl font-bold mb-6 text-neutral-heading">
-        Things That Interest Me
-      </h2>
+      <h2 className="text-3xl font-bold mb-6 text-neutral-heading">Things That Interest Me</h2>
 
       {/* Books subsection */}
       <div className="mb-8">
-        <h3 className="text-2xl font-semibold mb-4 text-neutral-subheading">
-          Books
-        </h3>
+        <h3 className="text-2xl font-semibold mb-4 text-neutral-subheading">Books</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <AmazonBookCard
             title="Designing Data-Intensive Applications"
@@ -38,9 +34,7 @@ export default function Interests() {
 
       {/* Podcasts subsection */}
       <div className="mb-8">
-        <h3 className="text-2xl font-semibold mb-4 text-neutral-subheading">
-          Podcasts
-        </h3>
+        <h3 className="text-2xl font-semibold mb-4 text-neutral-subheading">Podcasts</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <SpotifyPodcastCard
             title="Lex Fridman Podcast"
@@ -65,9 +59,7 @@ export default function Interests() {
 
       {/* YouTube channels subsection */}
       <div>
-        <h3 className="text-2xl font-semibold mb-4 text-neutral-subheading">
-          YouTube Channels
-        </h3>
+        <h3 className="text-2xl font-semibold mb-4 text-neutral-subheading">YouTube Channels</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <YouTubeCard
             title="Fly4Life"

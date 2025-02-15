@@ -1,6 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Github, Linkedin } from "lucide-react";
+import Link from 'next/link';
+import Image from 'next/image';
+import { Github, Linkedin } from 'lucide-react';
 
 export default function Header() {
   return (
@@ -20,8 +20,8 @@ export default function Header() {
               Sam McAnelly
             </h1>
             <p className="text-neutral-subheading text-sm md:text-base max-w-md">
-              Software Development Engineer with a focus on scalable, serverless
-              solutions and infrastructure as code.
+              Software Development Engineer with a focus on scalable, serverless solutions and
+              infrastructure as code.
             </p>
             <div className="flex justify-center md:justify-start gap-4 mt-4">
               <Link

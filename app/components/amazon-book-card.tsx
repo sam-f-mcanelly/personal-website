@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface AmazonBookCardProps {
   title: string;
@@ -18,16 +18,14 @@ export default function AmazonBookCard({
     <div className="flex flex-col items-center bg-black/60 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]">
       <div className="relative w-32 h-auto mb-4">
         <Image
-          src={imageUrl || "/placeholder.svg"}
+          src={imageUrl || '/placeholder.svg'}
           alt={title}
           width={128}
           height={192}
           className="object-contain rounded-md"
         />
       </div>
-      <h3 className="text-sm font-semibold text-neutral-heading text-center mb-1">
-        {title}
-      </h3>
+      <h3 className="text-sm font-semibold text-neutral-heading text-center mb-1">{title}</h3>
       <p className="text-xs text-neutral-accent mb-2">{author}</p>
       <Link
         href={amazonLink}

@@ -29,17 +29,13 @@ To use your self-hosted images in place of the placeholder.svg:
    From:
 
 ```jsx
-
-   src="/placeholder.svg?height=400&width=600"
-
+src = '/placeholder.svg?height=400&width=600';
 ```
 
-   To:
+To:
 
 ```jsx
-
-   src="/images/your-image-name.jpg"
-
+src = '/images/your-image-name.jpg';
 ```
 
 2. Make sure to provide appropriate alt text for accessibility.
@@ -48,21 +44,13 @@ To use your self-hosted images in place of the placeholder.svg:
 Example:
 
 ```jsx
-
 <Image
-
-src="/images/project-thumbnail.jpg"
-
-alt="Project Thumbnail"
-
-width={600}
-
-height={400}
-
-className="object-cover rounded-lg"
-
+  src="/images/project-thumbnail.jpg"
+  alt="Project Thumbnail"
+  width={600}
+  height={400}
+  className="object-cover rounded-lg"
 />
-
 ```
 
 Remember to optimize your images for web use to ensure fast loading times.
@@ -87,11 +75,11 @@ The deployment process is automated through `.gitea/workflows/release.yml`:
 name: Build and Release
 run-name: ${{ gitea.actor }} has triggered Build and Release 🚀
 on: [push]
-
 # ... (rest of the workflow file)
 ```
 
 The workflow:
+
 1. Builds the Next.js application
 2. Creates a Docker image
 3. Pushes the image to a private registry running on the server in a docker container
@@ -107,9 +95,9 @@ services:
     container_name: personal-website
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - '3000:3000'
     labels:
-      - "com.centurylinklabs.watchtower.enable=true"
+      - 'com.centurylinklabs.watchtower.enable=true'
 
   watchtower:
     image: containrrr/watchtower
@@ -123,6 +111,7 @@ services:
 ```
 
 When changes are pushed to the main branch:
+
 1. Gitea Actions builds and pushes a new Docker image
 2. Watchtower detects the new image
 3. The website container is automatically updated

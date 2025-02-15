@@ -1,12 +1,10 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 interface ApplePodcastButtonProps {
   applePodcastLink: string;
 }
 
-export default function ApplePodcastButton({
-  applePodcastLink,
-}: ApplePodcastButtonProps) {
+export default function ApplePodcastButton({ applePodcastLink }: ApplePodcastButtonProps) {
   return (
     <Link
       href={applePodcastLink}
