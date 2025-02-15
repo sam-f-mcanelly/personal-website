@@ -26,11 +26,16 @@ RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs && \
     chown -R nextjs:nodejs /app
 
+# Copy package.json files for production dependencies
+COPY --from=builder --chown=nextjs:nodejs /app/package*.json ./
 # Copy built assets from builder stage
 COPY --from=builder --chown=nextjs:nodejs /app/next.config.mjs ./
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+# Install only production dependencies
+RUN npm ci --only=production
 
 # Switch to non-root user
 USER nextjs
@@ -41,5 +46,5 @@ EXPOSE 3064
 # Set host to allow connections from outside the container
 ENV HOSTNAME="0.0.0.0"
 
-# Start the application using next start
-CMD ["npm", "start"]
+# Start the application using the standalone server
+CMD ["node", "server.js"]
