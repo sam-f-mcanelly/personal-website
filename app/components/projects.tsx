@@ -11,7 +11,7 @@ export default function Projects() {
             description="A transaction managment and tax reporting software for hodlers who prefer to self custody their assets."
             image="/images/projects/bitcoin_tracker.png"
             link="https://github.com"
-            tags={['React', 'Node.js', 'Next.js', 'H2', 'Ktor', 'Kotlin', 'Docker', 'Dagger']}
+            tags={['React', 'Next.js', 'H2', 'Ktor', 'Kotlin', 'JUnit', 'MockK', 'Docker', 'Dagger']}
           />
           <ProjectCard
             title="Personal Website"
