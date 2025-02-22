@@ -8,7 +8,7 @@ export default function Projects() {
         <div className="space-y-8 py-5">
         <ProjectCard
             title="Stack Track"
-            description="A transaction managment and tax reporting software for hodlers who prefer to self custody their assets."
+            description="A transaction managment and tax reporting software for BTC hodlers who prefer to self custody their assets."
             image="/images/projects/stack-track-dark.png"
             link="https://github.com/sam-f-mcanelly/stack-track"
             tags={['React', 'Node.js', 'Next.js', 'Docker']}
