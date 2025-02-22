@@ -6,12 +6,19 @@ export default function Projects() {
       <section id="projects" className="py-8">
         <h2 className="text-3xl font-bold mb-6 text-neutral-heading">Projects</h2>
         <div className="space-y-8 py-5">
-          <ProjectCard
-            title="Crypto Tax Calculator"
+        <ProjectCard
+            title="Stack Track"
             description="A transaction managment and tax reporting software for hodlers who prefer to self custody their assets."
-            image="/images/projects/bitcoin_tracker.png"
-            link="https://github.com"
-            tags={['React', 'Next.js', 'H2', 'Ktor', 'Kotlin', 'JUnit', 'MockK', 'Docker', 'Dagger']}
+            image="/images/projects/stack-track-dark.png"
+            link="https://github.com/sam-f-mcanelly/stack-track"
+            tags={['React', 'Node.js', 'Next.js', 'Docker']}
+          />
+          <ProjectCard
+            title="Stack Track Core"
+            description="Backend service for Stack Track that handles data aggregation, analysis, and tax computations."
+            image="/images/projects/stack-track.png"
+            link="https://github.com/sam-f-mcanelly/stack-track-core"
+            tags={['H2', 'Ktor', 'Kotlin', 'JUnit', 'MockK', 'Docker', 'Dagger']}
           />
           <ProjectCard
             title="Personal Website"
