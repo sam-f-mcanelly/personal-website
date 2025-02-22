@@ -1,8 +1,8 @@
 import Header from './components/header';
-import Resume from './components/resume';
-import Projects from './components/projects';
-import Interests from './components/interests';
-import Gallery from './components/gallery';
+import Resume from './components/resume/resume';
+import Projects from './components/resume/projects/projects';
+import Interests from './components/personal/interests';
+import Gallery from './components/personal/gallery';
 import Link from 'next/link';
 
 export default function Page() {

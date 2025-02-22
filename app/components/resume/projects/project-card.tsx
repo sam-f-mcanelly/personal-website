@@ -2,7 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Github } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Color, Skill, skillToColor } from '../common/skill-colors';
+import { Color, Skill, skillToColor } from '../../../common/skill-colors';
 
 interface ProjectCardProps {
   title: string;

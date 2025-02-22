@@ -1,5 +1,5 @@
-import Skills from './skills';
-import Timeline from './timeline';
+import Skills from './timeline/skills';
+import Timeline from './timeline/timeline';
 
 export default function Resume() {
   return (

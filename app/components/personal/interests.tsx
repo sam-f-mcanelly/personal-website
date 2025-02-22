@@ -1,6 +1,6 @@
-import AmazonBookCard from './amazon-book-card';
-import SpotifyPodcastCard from './spotify-podcast-card';
-import YouTubeCard from './youtube-card';
+import AmazonBookCard from './cards/amazon-book-card';
+import SpotifyPodcastCard from './cards/spotify-podcast-card';
+import YouTubeCard from './cards/youtube-card';
 
 export default function Interests() {
   return (

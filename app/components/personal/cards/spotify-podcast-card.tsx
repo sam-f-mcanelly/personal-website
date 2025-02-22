@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import ApplePodcastButton from './apple-podcast-button';
+import ApplePodcastButton from '../apple-podcast-button';
 
 interface SpotifyPodcastCardProps {
   title: string;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { skillToColor, getColorClasses, type Skill } from '../common/skill-colors'
+import { skillToColor, getColorClasses, type Skill } from '../../../common/skill-colors'
 
 interface SkillCategory {
   title: string;
