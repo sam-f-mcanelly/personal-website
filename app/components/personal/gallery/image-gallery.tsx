@@ -65,6 +65,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title = "Gallery" }
                   height={240}
                   className="rounded-lg object-cover w-full h-full transition-transform duration-300 ease-in-out hover:scale-105"
                   loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </button>
             </div>

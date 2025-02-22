@@ -23,6 +23,7 @@ export default function AmazonBookCard({
           width={128}
           height={192}
           className="object-contain rounded-md"
+          sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
       <h3 className="text-sm font-semibold text-neutral-heading text-center mb-1">{title}</h3>

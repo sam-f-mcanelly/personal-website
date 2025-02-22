@@ -27,7 +27,14 @@ export default function ProjectCard({ title, description, image, link, tags }: P
   return (
     <Card className="overflow-hidden bg-black/60 backdrop-blur-sm transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02] text-opacity-100">
       <div className="relative h-40">
-        <Image src={image || '/images/placeholder.svg'} alt={title} fill className="object-cover" />
+        <Image src={
+          image || '/images/placeholder.svg'} 
+          alt={title} 
+          fill 
+          className="object-cover" 
+          sizes="(max-width: 768px) 100vw, 33vw"
+          priority
+        />
       </div>
       <CardContent className="p-4">
         <h3 className="font-semibold text-lg mb-2 text-neutral-heading">{title}</h3>

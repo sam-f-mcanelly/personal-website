@@ -23,6 +23,7 @@ export default function YouTubeCard({
           width={320}
           height={180}
           className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
       <div className="p-4">

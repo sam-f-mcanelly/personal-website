@@ -13,6 +13,8 @@ export default function Header() {
               alt="Sam McAnelly"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              priority
             />
           </div>
           <div className="flex-1 flex flex-col items-center md:items-start justify-center space-y-2 text-center md:text-left">

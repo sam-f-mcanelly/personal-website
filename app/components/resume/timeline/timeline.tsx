@@ -4,8 +4,7 @@ import EducationTimeline from './education';
 export default function Timeline() {
   return (
     <div className="relative">
-      {/* Timeline line */}
-      <div className="absolute left-0 top-12 h-[calc(100%-8rem)] w-px bg-green-500/30" />
+      
 
       {/* Experience section */}
       <JobTimeline />

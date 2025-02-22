@@ -25,6 +25,7 @@ export default function SpotifyPodcastCard({
           alt={title}
           fill
           className="object-cover rounded-md"
+          sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
       <h3 className="text-sm font-semibold text-neutral-heading text-center mb-2">{title}</h3>

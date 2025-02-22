@@ -53,63 +53,80 @@ const experienceItems = [
       'Collaborated with UX team to design intuitive alert mechanisms',
     ],
   },
+  {
+    startDate: 'Apr 2012',
+    endDate: 'Dec 2013',
+    title: 'TheNewBoston',
+    role: 'Software Educator & Content Creator ',
+    icon: '/images/resume/thenewboston.jpg',
+    description: [
+      'Taught Microsoft Visual Basic through Youtube videos that showed the development process',
+      'Produced 200 lessons covering many aspects of the .NET framework',
+      'https://www.youtube.com/@thenewboston',
+    ],
+  },
 ];
 
 export default function JobTimeline() {
   return (
-    <div className="space-y-8">
-      {experienceItems.map((item, index) => (
-        <div key={index} className="relative pl-16">
-          {/* Timeline marker with dates */}
-          <div className="absolute left-0 top-0 bottom-0 -translate-x-1/2 flex flex-col items-center">
-            <div className="text-sm text-neutral-accent mb-2 whitespace-nowrap">
-              {item.endDate}
-            </div>
-            <div
-              className={`w-4 h-4 rounded-full border-4 ${
-                item.endDate === 'Present'
-                  ? 'bg-yellow-500 border-yellow-900/50 animate-pulse'
-                  : 'bg-red-500 border-red-900/50'
-              }`}
-            />
+    <div className="relative">
+      {/* Timeline line */}
+      <div className="absolute left-0 top-12 h-[calc(100%-8rem)] w-px bg-green-500/30" />
+      <div className="space-y-8">
+        {experienceItems.map((item, index) => (
+          <div key={index} className="relative pl-16">
+            {/* Timeline marker with dates */}
+            <div className="absolute left-0 top-0 bottom-0 -translate-x-1/2 flex flex-col items-center">
+              <div className="text-sm text-neutral-accent mb-2 whitespace-nowrap">
+                {item.endDate}
+              </div>
+              <div
+                className={`w-4 h-4 rounded-full border-4 ${
+                  item.endDate === 'Present'
+                    ? 'bg-yellow-500 border-yellow-900/50 animate-pulse'
+                    : 'bg-red-500 border-red-900/50'
+                }`}
+              />
 
-            <div className="flex-grow w-px bg-purple-500/30" />
-            <div className="w-4 h-4 rounded-full bg-green-500 border-4 border-purple-900/50" />
-            <div className="text-sm text-neutral-accent mt-2 whitespace-nowrap">
-              {item.startDate}
+              <div className="flex-grow w-px bg-purple-500/30" />
+              <div className="w-4 h-4 rounded-full bg-green-500 border-4 border-purple-900/50" />
+              <div className="text-sm text-neutral-accent mt-2 whitespace-nowrap">
+                {item.startDate}
+              </div>
             </div>
-          </div>
 
-          {/* Content card */}
-          <div className="relative">
-            <div className="absolute left-0 top-0 w-full h-full bg-neutral-accent/5 rounded-lg transform rotate-1 z-0" />
-            <div className="relative z-10 bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
-              <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-white">
-                  <Image
-                    src={item.icon}
-                    alt={item.title}
-                    width={50}
-                    height={50}
-                    className="rounded-md object-cover"
-                  />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-neutral-heading">{item.title}</h3>
-                  <p className="text-sm text-neutral-accent mb-4">{item.role}</p>
-                  <ul className="list-disc -ml-8 space-y-1 text-neutral-text">
-                    {item.description.map((desc, i) => (
-                      <li key={i}>
-                        <span>{desc}</span>
-                      </li>
-                    ))}
-                  </ul>
+            {/* Content card */}
+            <div className="relative">
+              <div className="absolute left-0 top-0 w-full h-full bg-neutral-accent/5 rounded-lg transform rotate-1 z-0" />
+              <div className="relative z-10 bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
+                <div className="flex items-start gap-4">
+                  <div className="rounded-lg bg-white">
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={50}
+                      height={50}
+                      className="rounded-md object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-neutral-heading">{item.title}</h3>
+                    <p className="text-sm text-neutral-accent mb-4">{item.role}</p>
+                    <ul className="list-disc -ml-8 space-y-1 text-neutral-text">
+                      {item.description.map((desc, i) => (
+                        <li key={i}>
+                          <span>{desc}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

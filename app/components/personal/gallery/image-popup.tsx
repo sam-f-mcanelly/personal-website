@@ -86,6 +86,7 @@ const ImagePopup: React.FC<{ images: string[] }> = ({ images }) => {
             objectFit="contain"
             className="rounded-lg"
             draggable={false}
+            sizes="(max-width: 768px) 100vw, 33vw"
           />
           <button
             onClick={() => navigateImage("prev")}
