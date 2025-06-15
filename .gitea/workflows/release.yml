@@ -17,6 +17,17 @@ jobs:
       - run: echo "🎉 The job was automatically triggered by a ${{ gitea.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by Gitea!"
       - run: echo "🔎 The name of your branch is ${{ gitea.ref }} and your repository is ${{ gitea.repository }}."
+      - name: Add gitea and umbrel hostname mapping
+        run: |
+          echo "10.21.0.26 gitea_server_1" | sudo tee -a /etc/hosts
+          echo "Added gitea_server_1 to hosts file:"
+          echo "10.21.0.26 umbrel.local" | sudo tee -a /etc/hosts
+          echo "Added umbrel.local to hosts file:"
+          grep gitea_server_1 /etc/hosts
+          grep umbrel.local /etc/hosts
+          echo "Testing connection:"
+          curl -s http://gitea_server_1:8085/api/v1/version
+
       - name: Check out repository code
         uses: actions/checkout@v4
       - run: echo "💡 The ${{ gitea.repository }} repository has been cloned to the runner."
