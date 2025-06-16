@@ -54,4 +54,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: umbrel_docker_registry_1:5000/sam/personal-website:latest
+          tags: umbrel-docker-registry:5000/sam/personal-website:latest
