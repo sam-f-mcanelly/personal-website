@@ -1,5 +1,5 @@
 import React from 'react';
-import { skillToColor, getColorClasses, type Skill } from '../../../common/skill-colors'
+import { skillToColor, getColorClasses, type Skill } from '../../../common/skill-colors';
 
 interface SkillCategory {
   title: string;
@@ -9,7 +9,17 @@ interface SkillCategory {
 const skillCategories: SkillCategory[] = [
   {
     title: 'Amazon Web Systems',
-    skills: ['Lambda', 'API Gateway', 'CloudFormation', 'CloudWatch', 'SQS'] as Skill[],
+    skills: [
+      'Lambda',
+      'API Gateway',
+      'CloudFormation',
+      'CloudWatch',
+      'SQS',
+      'DynamoDB',
+      'S3',
+      'IAM',
+      'SNS',
+    ] as Skill[],
   },
   {
     title: 'Languages',
@@ -25,7 +35,7 @@ const skillCategories: SkillCategory[] = [
       'Infrastructure as Code',
       'Back-end (Ktor, RPC, REST)',
       'Serverless',
-      'Scalability'
+      'Scalability',
     ] as Skill[],
   },
 ];
@@ -51,7 +61,7 @@ export default function Skills() {
                   return (
                     <span
                       key={skill}
-                      className={`px-2 py-1 ${classes.bg} rounded-full text-sm ${classes.text}`}
+                      className={`px-2 py-1 ${classes?.bg || 'bg-green-500'} rounded-full text-sm ${classes?.text || 'text-white'}`}
                     >
                       {skill}
                     </span>

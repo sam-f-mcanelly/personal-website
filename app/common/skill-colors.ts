@@ -14,6 +14,10 @@ export const skillToColor = {
     'CloudFormation': 'orange',
     'CloudWatch': 'orange',
     'SQS': 'orange',
+    'DynamoDB': 'orange',
+    'S3': 'orange',
+    'IAM': 'orange',
+    'SNS': 'orange',
   
     // Languages - blue
     'Kotlin': 'blue',
