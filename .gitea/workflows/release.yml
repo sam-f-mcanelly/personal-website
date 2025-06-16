@@ -45,7 +45,7 @@ jobs:
           driver-opts: |
             network=umbrel_main_network
           config-inline: |
-            [registry."umbrel_docker_registry_1:5000"]
+            [registry."umbrel-docker-registry:5000"]
               http=true
               insecure=true
       - name: 🔧 Build and Push Docker Image
