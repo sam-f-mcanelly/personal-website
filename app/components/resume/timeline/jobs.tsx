@@ -9,7 +9,7 @@ const experienceItems = [
     icon: '/images/resume/aws_icon.jpg',
     description: [
       'Led design and implementation of major features in a developer tools platform that automated infrastructure creation across AWS regions',
-      'Spearheaded a cross-team initiative to automate regional infrastructure deployment, significantly reducing time-to-market for new AWS region launches',
+      'Drove a cross-team initiative to automate regional infrastructure deployment, significantly reducing time-to-market for new AWS region launches',
       'Developed automated validation systems to detect and alert teams about regressions affecting regional expansion',
       'Established best practices and provided technical guidance to teams across Amazon for infrastructure-as-code implementation',
       'Collaborated with product teams to design scalable solutions for multi-region deployment strategies',

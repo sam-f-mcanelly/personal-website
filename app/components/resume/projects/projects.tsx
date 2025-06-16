@@ -27,6 +27,13 @@ export default function Projects() {
             link="https://github.com/sam-f-mcanelly/personal-website"
             tags={['Next.js', 'Docker', 'React', 'TypeScript', 'TailwindCSS']}
           />
+          <ProjectCard
+            title="Home Server CI/CD pipeline with Gitea and Docker"
+            description="A homebrew solution for managing an Umbrel Linux home server with continuous integration and deployment using Gitea and Docker."
+            image="/images/projects/gitea-ci-cd.png"
+            link="https://github.com/sam-f-mcanelly/portainer-gitea-ci-cd"
+            tags={['Docker', 'Github Actions', 'CI/CD','Linux']}
+          />
         </div>
       </section>
     </div>
