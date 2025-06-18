@@ -4,15 +4,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Color, Skill, skillToColor } from '../../../common/skill-colors';
 
+interface GitHubLink {
+  name: string;
+  link: string;
+}
+
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
-  link: string;
+  links: GitHubLink[]; 
   tags: string[];
 }
 
-export default function ProjectCard({ title, description, image, link, tags }: ProjectCardProps) {
+export default function ProjectCard({ title, description, image, links, tags }: ProjectCardProps) {
   const isKnownSkill = (tag: string): tag is Skill => {
     return tag in skillToColor;
   };
@@ -52,14 +57,19 @@ export default function ProjectCard({ title, description, image, link, tags }: P
               );
             })}
         </div>
-        <Link
-          href={link}
-          target="_blank"
-          className="inline-flex items-center gap-2 text-sm text-neutral-accent hover:underline"
-        >
-          <Github className="h-4 w-4" />
-          View on GitHub
-        </Link>
+        <div className="flex flex-col gap-2">
+          {links.map((githubLink, index) => (
+            <Link
+              key={index}
+              href={githubLink.link}
+              target="_blank"
+              className="inline-flex items-center gap-2 text-sm text-neutral-accent hover:underline"
+            >
+              <Github className="h-4 w-4" />
+              {githubLink.name}
+            </Link>
+          ))}
+        </div>
       </CardContent>
     </Card>
   );

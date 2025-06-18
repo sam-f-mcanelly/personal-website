@@ -10,7 +10,7 @@ const experienceItems = [
     description: [
       'Led design and implementation of major features in a developer tools platform that automated infrastructure creation across AWS regions',
       'Drove a cross-team initiative to automate regional infrastructure deployment, significantly reducing time-to-market for new AWS region launches',
-      'Developed automated validation systems to detect and alert teams about regressions affecting regional expansion',
+      'Led the development of automated an automated validation system to proactively scan source code and build artifacts to identify region expansion issues across 40,000+ packages',
       'Established best practices and provided technical guidance to teams across Amazon for infrastructure-as-code implementation',
       'Collaborated with product teams to design scalable solutions for multi-region deployment strategies',
     ],
@@ -58,7 +58,7 @@ const experienceItems = [
     endDate: 'Dec 2013',
     title: 'TheNewBoston',
     role: 'Software Educator & Content Creator ',
-    icon: '/images/resume/thenewboston.jpg',
+    icon: '/images/resume/thenewboston.png',
     description: [
       'Taught Microsoft Visual Basic through Youtube videos that showed the development process',
       'Produced 200 lessons covering many aspects of the .NET framework',
@@ -100,7 +100,7 @@ export default function JobTimeline() {
               <div className="absolute left-0 top-0 w-full h-full bg-neutral-accent/5 rounded-lg transform rotate-1 z-0" />
               <div className="relative z-10 bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.02] dark:border-slate-800">
                 <div className="flex items-start gap-4">
-                  <div className="rounded-lg bg-white">
+                  <div className="rounded-lg bg-white flex-shrink-0">
                     <Image
                       src={item.icon}
                       alt={item.title}

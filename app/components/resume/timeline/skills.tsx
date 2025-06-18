@@ -36,6 +36,9 @@ const skillCategories: SkillCategory[] = [
       'Back-end (Ktor, RPC, REST)',
       'Serverless',
       'Scalability',
+      'Sovereign Computing',
+      'Event-Driven Architecture',
+      'Distributed Systems'
     ] as Skill[],
   },
 ];

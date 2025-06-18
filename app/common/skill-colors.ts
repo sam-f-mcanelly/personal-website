@@ -42,7 +42,10 @@ export const skillToColor = {
     'Infrastructure as Code': 'green',
     'Back-end (Ktor, RPC, REST)': 'green',
     'Serverless': 'green',
-    'Scalability': 'green'
+    'Scalability': 'green',
+    'Sovereign Computing': 'green',
+    'Event-Driven Architecture': 'green',
+    'Distributed Systems': 'green',
   } as const;
   
   export type Skill = keyof typeof skillToColor;
