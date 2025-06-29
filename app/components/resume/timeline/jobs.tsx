@@ -8,9 +8,10 @@ const experienceItems = [
     role: 'Software Development Engineer II',
     icon: '/images/resume/aws_icon.jpg',
     description: [
+      'Built comprehensive package discovery and analysis platform that scales to process 100,000+ software packages in single execution runs, identifying source types and infrastructure artifacts across code packages',
+      'Led full system architecture design including serverless workflows, database optimization, and monitoring infrastructure, transforming basic scripting solution into production-grade platform',
       'Led design and implementation of major features in a developer tools platform that automated infrastructure creation across AWS regions',
       'Drove a cross-team initiative to automate regional infrastructure deployment, significantly reducing time-to-market for new AWS region launches',
-      'Led the development of automated an automated validation system to proactively scan source code and build artifacts to identify region expansion issues across 40,000+ packages',
       'Established best practices and provided technical guidance to teams across Amazon for infrastructure-as-code implementation',
       'Collaborated with product teams to design scalable solutions for multi-region deployment strategies',
     ],
