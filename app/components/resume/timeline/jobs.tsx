@@ -2,8 +2,16 @@ import Image from 'next/image';
 
 const experienceItems = [
   {
-    startDate: 'Oct 2021',
+    startDate: 'Aug 2025',
     endDate: 'Present',
+    title: 'Netflix',
+    role: 'Senior Software Engineer',
+    icon: '/images/resume/netflix.png',
+    description: ['Netflix Live Streaming'],
+  },
+  {
+    startDate: 'Oct 2021',
+    endDate: 'Aug 2025',
     title: 'Amazon Web Services',
     role: 'Software Development Engineer II',
     icon: '/images/resume/aws_icon.jpg',
