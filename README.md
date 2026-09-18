@@ -35,6 +35,7 @@ The dev server runs at http://localhost:3064.
 
 ```
 app/
+  blog/                  Blog index and post pages
   components/
     header.tsx           Name, photo, and social links
     resume/              Experience timeline, education, skills, and projects
@@ -42,8 +43,8 @@ app/
   common/                Shared data (skill tag colors)
   terms/                 Terms of service page
   globals.css            Tailwind setup and theme variables
-components/              Shared UI components and the animated background
-contexts/                React context for the image popup
+components/              Shared UI components, the sidebar, and the animated background
+content/blog/            Blog posts in Markdown
 public/images/           Images, grouped by section
 ```
 
@@ -56,9 +57,27 @@ Most content lives as data at the top of its component:
 - **Skills:** `app/components/resume/timeline/skills.tsx`
 - **Projects:** `app/components/resume/projects/projects.tsx`
 - **Interests and gallery:** `app/components/personal/`
+- **Blog posts:** Markdown files in `content/blog/` (see below)
 
 Images go in the matching folder under `public/images/` and are referenced by path, e.g.
 `/images/resume/netflix.png`.
+
+## Writing Blog Posts
+
+Each Markdown file in `content/blog/` is a post, served at `/blog/<file-name>`. Start the file with
+frontmatter:
+
+```md
+---
+title: My Post
+date: 2026-09-18
+summary: One line shown in the post list.
+draft: false
+---
+```
+
+Posts with `draft: true` appear in `npm run dev` but are left out of production builds. Posts are
+rendered to static HTML at build time.
 
 ## Deployment
 

@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import type React from 'react';
 import LiveBackground from '@/components/live-background';
+import Sidebar from '@/components/sidebar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,7 +22,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={cn('min-h-screen font-sans antialiased', inter.className)}>
         <LiveBackground />
-        {children}
+        <Sidebar />
+        <div className="lg:pl-20">{children}</div>
       </body>
     </html>
   );

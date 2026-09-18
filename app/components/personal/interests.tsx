@@ -2,6 +2,10 @@ import AmazonBookCard from './cards/amazon-book-card';
 import SpotifyPodcastCard from './cards/spotify-podcast-card';
 import YouTubeCard from './cards/youtube-card';
 
+import systemDesignCover from '@/public/images/books/system_design.jpg';
+import bitcoinStandardCover from '@/public/images/books/bitcoin_standard.jpg';
+import littleBrotherCover from '@/public/images/books/little_brother.jpg';
+
 export default function Interests() {
   return (
     <section id="interests">
@@ -15,19 +19,19 @@ export default function Interests() {
             <AmazonBookCard
               title="Designing Data-Intensive Applications"
               author="Martin Kleppmann"
-              imageUrl="/images/books/system_design.jpg"
+              image={systemDesignCover}
               amazonLink="https://www.amazon.com/dp/1449373321"
             />
             <AmazonBookCard
               title="The Bitcoin Standard"
               author="Saifedean Ammous"
-              imageUrl="/images/books/bitcoin_standard.jpg"
+              image={bitcoinStandardCover}
               amazonLink="https://www.amazon.com/dp/1119473861"
             />
             <AmazonBookCard
               title="Little Brother"
               author="Cory Doctorow"
-              imageUrl="/images/books/little_brother.jpg"
+              image={littleBrotherCover}
               amazonLink="https://www.amazon.com/dp/0765323117"
             />
           </div>

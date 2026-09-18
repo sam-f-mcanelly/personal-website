@@ -1,26 +1,25 @@
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 
 interface AmazonBookCardProps {
   title: string;
   author: string;
-  imageUrl: string;
+  image: StaticImageData;
   amazonLink: string;
 }
 
 export default function AmazonBookCard({
   title,
   author,
-  imageUrl,
+  image,
   amazonLink,
 }: AmazonBookCardProps) {
   return (
     <div className="flex items-center gap-4 bg-black/60 backdrop-blur-xs rounded-lg p-3 transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]">
       <Image
-        src={imageUrl || '/placeholder.svg'}
+        src={image}
         alt={title}
-        width={56}
-        height={84}
+        sizes="56px"
         className="w-14 h-auto shrink-0 object-contain rounded-sm"
       />
       <div className="min-w-0">
