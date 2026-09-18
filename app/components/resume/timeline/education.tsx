@@ -25,25 +25,21 @@ export default function EducationTimeline() {
     <ol>
       {educationItems.map((item, index) => (
         <TimelineItem key={index} startDate={item.startDate} endDate={item.endDate}>
-          <div className="bg-black/60 backdrop-blur-xs p-4 md:p-5 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.01] dark:border-slate-800">
-            <div className="flex items-center gap-3">
-              <div className="bg-white rounded-md shrink-0">
-                <Image
-                  src={item.icon}
-                  alt={`${item.institution} Logo`}
-                  width={40}
-                  height={40}
-                  className="rounded-md object-cover"
-                />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-neutral-subheading">
-                  {item.institution}
-                </h3>
-                <p className="text-sm text-neutral-accent">
-                  {item.degree} | {item.minor}
-                </p>
-              </div>
+          <div className="flex items-center gap-3">
+            <div className="bg-white rounded-md shrink-0">
+              <Image
+                src={item.icon}
+                alt={`${item.institution} Logo`}
+                width={40}
+                height={40}
+                className="rounded-md object-cover"
+              />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-neutral-subheading">{item.institution}</h3>
+              <p className="text-sm text-neutral-accent">
+                {item.degree} | {item.minor}
+              </p>
             </div>
           </div>
         </TimelineItem>

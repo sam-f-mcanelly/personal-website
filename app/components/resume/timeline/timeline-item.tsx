@@ -11,8 +11,8 @@ export default function TimelineItem({ startDate, endDate, children }: TimelineI
 
   return (
     <li className="group flex gap-3 pb-4 last:pb-0">
-      {/* Dates */}
-      <div className="w-14 md:w-16 shrink-0 pt-5 text-right text-xs md:text-sm leading-tight">
+      {/* Dates column (desktop only; on mobile the dates move into the card) */}
+      <div className="hidden md:block w-16 shrink-0 pt-5 text-right text-sm leading-tight">
         <div className="text-neutral-accent whitespace-nowrap">{endDate}</div>
         <div className="mt-1 text-muted-foreground whitespace-nowrap">{startDate}</div>
       </div>
@@ -29,7 +29,12 @@ export default function TimelineItem({ startDate, endDate, children }: TimelineI
         />
       </div>
 
-      <div className="flex-1 min-w-0">{children}</div>
+      <div className="flex-1 min-w-0 bg-black/60 backdrop-blur-xs p-4 md:p-5 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.01] dark:border-slate-800">
+        <p className="md:hidden mb-2 text-xs text-neutral-accent">
+          {startDate} – {endDate}
+        </p>
+        {children}
+      </div>
     </li>
   );
 }

@@ -86,28 +86,26 @@ export default function JobTimeline() {
     <ol>
       {experienceItems.map((item, index) => (
         <TimelineItem key={index} startDate={item.startDate} endDate={item.endDate}>
-          <div className="bg-black/60 backdrop-blur-xs p-4 md:p-5 rounded-lg shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl hover:scale-[1.01] dark:border-slate-800">
-            <div className="flex items-center gap-3">
-              <div className="rounded-md bg-white shrink-0">
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={40}
-                  height={40}
-                  className="rounded-md object-cover"
-                />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-neutral-heading">{item.title}</h3>
-                <p className="text-sm text-neutral-accent">{item.role}</p>
-              </div>
+          <div className="flex items-center gap-3">
+            <div className="rounded-md bg-white shrink-0">
+              <Image
+                src={item.icon}
+                alt={item.title}
+                width={40}
+                height={40}
+                className="rounded-md object-cover"
+              />
             </div>
-            <ul className="list-disc pl-5 mt-3 space-y-1 text-sm md:text-base text-neutral-text">
-              {item.description.map((desc, i) => (
-                <li key={i}>{desc}</li>
-              ))}
-            </ul>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-neutral-heading">{item.title}</h3>
+              <p className="text-sm text-neutral-accent">{item.role}</p>
+            </div>
           </div>
+          <ul className="list-disc pl-5 mt-3 space-y-1 text-sm md:text-base text-neutral-text">
+            {item.description.map((desc, i) => (
+              <li key={i}>{desc}</li>
+            ))}
+          </ul>
         </TimelineItem>
       ))}
     </ol>
