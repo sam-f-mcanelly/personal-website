@@ -2,10 +2,9 @@ import ProjectCard from './project-card';
 
 export default function Projects() {
   return (
-    <div className="lg:w-1/3">
-      <section id="projects" className="py-8">
-        <h2 className="text-3xl font-bold mb-6 text-neutral-heading">Projects</h2>
-        <div className="space-y-8 py-5">
+    <section id="projects">
+      <h2 className="text-3xl font-bold mb-6 text-neutral-heading">Projects</h2>
+      <div className="space-y-4">
           <ProjectCard
             title="Stack Track"
             description="A transaction tracking and tax reporting software for BTC hodlers who prefer to self custody their assets."
@@ -57,8 +56,7 @@ export default function Projects() {
             ]}
             tags={['Docker', 'Github Actions', 'CI/CD', 'Linux']}
           />
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

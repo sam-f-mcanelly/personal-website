@@ -1,6 +1,7 @@
 import Header from './components/header';
 import Resume from './components/resume/resume';
 import Projects from './components/resume/projects/projects';
+import Skills from './components/resume/timeline/skills';
 import Interests from './components/personal/interests';
 import Gallery from './components/personal/gallery';
 import Link from 'next/link';
@@ -8,19 +9,20 @@ import Link from 'next/link';
 export default function Page() {
   return (
     <div className="min-h-screen text-foreground relative z-10">
-      <main className="container px-4 md:px-6 py-8">
+      <main className="container px-4 md:px-6 py-6 space-y-12">
         <Header />
 
         <div className="flex flex-col lg:flex-row gap-8">
           <Resume />
-          <Projects />
+          <aside className="lg:w-1/3 space-y-12">
+            <Projects />
+            <Skills />
+          </aside>
         </div>
 
         <Interests />
 
-        <section className="py-12">
-          <Gallery />
-        </section>
+        <Gallery />
       </main>
 
       <footer className="border-t border-white/20 bg-black/40 backdrop-blur-md">

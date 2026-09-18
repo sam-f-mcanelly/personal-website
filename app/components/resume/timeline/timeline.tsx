@@ -3,19 +3,11 @@ import EducationTimeline from './education';
 
 export default function Timeline() {
   return (
-    <div className="relative">
-      
-
-      {/* Experience section */}
+    <div>
       <JobTimeline />
 
-      {/* Education section */}
-      <div className="mt-16">
-        <h2 className="text-xl font-bold mb-6 px-20 text-neutral-subheading">Education</h2>
-        <div>
-          <EducationTimeline />
-        </div>
-      </div>
+      <h2 className="text-xl font-bold mt-8 mb-4 text-neutral-subheading">Education</h2>
+      <EducationTimeline />
     </div>
   );
 }

@@ -44,8 +44,8 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title = "Gallery" }
   }, [handleScroll])
 
   return (
-    <div className="bg-black/60 backdrop-blur-xs rounded-lg p-6 shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl dark:border-slate-800">
-      <h2 className="text-3xl font-bold mb-6 text-neutral-heading">{title}</h2>
+    <div className="bg-black/60 backdrop-blur-xs rounded-lg p-4 md:p-5 shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl dark:border-slate-800">
+      <h2 className="text-3xl font-bold mb-4 text-neutral-heading">{title}</h2>
       <div className="relative">
         <div
           ref={scrollContainerRef}

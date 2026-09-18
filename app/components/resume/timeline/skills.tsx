@@ -45,14 +45,14 @@ const skillCategories: SkillCategory[] = [
 
 export default function Skills() {
   return (
-    <div className="mt-16">
-      <h2 className="text-xl font-bold mb-6 text-neutral-subheading">Skills</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section id="skills">
+      <h2 className="text-3xl font-bold mb-6 text-neutral-heading">Skills</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
         {skillCategories.map((category) => {
           return (
             <div
               key={category.title}
-              className={`bg-black/60 backdrop-blur-xs p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]`}
+              className={`bg-black/60 backdrop-blur-xs p-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]`}
             >
               <h3 className="text-lg font-semibold mb-2 text-neutral-heading">
                 {category.title}
@@ -64,7 +64,7 @@ export default function Skills() {
                   return (
                     <span
                       key={skill}
-                      className={`px-2 py-1 ${classes?.bg || 'bg-green-500'} rounded-full text-sm ${classes?.text || 'text-white'}`}
+                      className={`px-2 py-0.5 ${classes?.bg || 'bg-green-500'} rounded-full text-sm ${classes?.text || 'text-white'}`}
                     >
                       {skill}
                     </span>
@@ -75,6 +75,6 @@ export default function Skills() {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }

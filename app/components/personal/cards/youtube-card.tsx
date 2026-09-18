@@ -22,18 +22,18 @@ export default function YouTubeCard({
           alt={title}
           width={320}
           height={180}
-          className="w-full object-cover"
+          className="w-full h-36 md:h-40 object-cover"
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
-      <div className="p-4">
+      <div className="p-3">
         <h3 className="text-sm font-semibold text-neutral-heading mb-1">{title}</h3>
-        <p className="text-xs text-neutral-accent mb-2">{channelName}</p>
+        <p className="text-xs text-neutral-accent mb-3">{channelName}</p>
         <Link
           href={videoLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs bg-red-600 text-white font-bold py-1 px-2 rounded hover:bg-red-500 transition-colors"
+          className="inline-block text-xs bg-red-600 text-white font-bold py-1 px-2 rounded hover:bg-red-500 transition-colors"
         >
           Watch on YouTube
         </Link>

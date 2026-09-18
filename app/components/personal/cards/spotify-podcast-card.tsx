@@ -18,30 +18,32 @@ export default function SpotifyPodcastCard({
   buttonType,
 }: SpotifyPodcastCardProps) {
   return (
-    <div className="flex flex-col items-center bg-black/60 backdrop-blur-xs rounded-lg p-4 transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]">
-      <div className="relative w-32 h-32 mb-4">
+    <div className="flex items-center gap-4 bg-black/60 backdrop-blur-xs rounded-lg p-3 transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]">
+      <div className="relative w-14 h-14 shrink-0">
         <Image
           src={imageUrl || '/placeholder.svg'}
           alt={title}
           fill
-          className="object-cover rounded-md"
-          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover rounded-sm"
+          sizes="56px"
         />
       </div>
-      <h3 className="text-sm font-semibold text-neutral-heading text-center mb-2">{title}</h3>
-      {buttonType === 'spotify' && spotifyLink && (
-        <Link
-          href={spotifyLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs bg-green-500 text-black font-bold py-1 px-2 rounded hover:bg-green-400 transition-colors"
-        >
-          Listen on Spotify
-        </Link>
-      )}
-      {buttonType === 'apple' && applePodcastLink && (
-        <ApplePodcastButton applePodcastLink={applePodcastLink} />
-      )}
+      <div className="min-w-0">
+        <h3 className="text-sm font-semibold text-neutral-heading mb-2">{title}</h3>
+        {buttonType === 'spotify' && spotifyLink && (
+          <Link
+            href={spotifyLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-xs bg-green-500 text-black font-bold py-1 px-2 rounded hover:bg-green-400 transition-colors"
+          >
+            Listen on Spotify
+          </Link>
+        )}
+        {buttonType === 'apple' && applePodcastLink && (
+          <ApplePodcastButton applePodcastLink={applePodcastLink} />
+        )}
+      </div>
     </div>
   );
 }

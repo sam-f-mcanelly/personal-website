@@ -4,16 +4,16 @@ import { Github, Linkedin } from '@/components/icons';
 
 export default function Header() {
   return (
-    <section id="intro" className="py-4 md:py-6 lg:py-8">
+    <section id="intro">
       <div className="container px-4 md:px-24 max-w-5xl">
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-8">
-          <div className="w-48 h-48 relative overflow-hidden rounded-full border-4 border-neutral-accent/30">
+          <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 relative overflow-hidden rounded-full border-4 border-neutral-accent/30">
             <Image
               src="/images/header/IMG_5132.jpg"
               alt="Sam McAnelly"
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 33vw"
+              sizes="160px"
               priority
             />
           </div>
