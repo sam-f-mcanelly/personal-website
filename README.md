@@ -1,135 +1,81 @@
-# Sam McAnelly's Portfolio Website
+# Sam McAnelly's Personal Website
 
 [![Version](https://img.shields.io/github/package-json/v/sam-f-mcanelly/personal-website)](https://github.com/sam-f-mcanelly/personal-website)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/sam-f-mcanelly/personal-website/release.yml)](https://github.com/sam-f-mcanelly/personal-website/actions)
-[![License](https://img.shields.io/github/license/sam-f-mcanelly/personal-website)](https://github.com/sam-f-mcanelly/personal-website/blob/main/LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/sam-f-mcanelly/personal-website)](https://github.com/sam-f-mcanelly/personal-website/commits/main)
+[![License](https://img.shields.io/badge/license-proprietary-lightgrey)](LICENSE)
 
-A modern, responsive portfolio website built with Next.js, React, and Tailwind CSS.
+My personal website: a resume timeline, side projects, and a look at my interests (photos, books,
+podcasts, and videos).
 
-## 🚀 Quick Start
+Built with Next.js 16 (App Router), React 19, Tailwind CSS 4, and TypeScript.
 
-1. Clone this repository
-2. Install dependencies with \`npm install\`
-3. Run the development server with \`npm run dev\`
+## Quick Start
 
-## Self-hosting Images
-
-To use your own images in the portfolio:
-
-1. Place your images in the \`public/images\` folder.
-2. Reference your images in the code using the path \`/images/your-image-name.jpg\`.
-
-### Using Self-hosted Images in Placeholders
-
-To use your self-hosted images in place of the placeholder.svg:
-
-1. In components that use Image or img tags, replace the src attribute:
-
-   From:
-
-```jsx
-src = '/placeholder.svg?height=400&width=600';
-```
-
-To:
-
-```jsx
-src = '/images/your-image-name.jpg';
-```
-
-2. Make sure to provide appropriate alt text for accessibility.
-3. Adjust the width and height props of the Image component if necessary to match your image dimensions.
-
-Example:
-
-```jsx
-<Image
-  src="/images/project-thumbnail.jpg"
-  alt="Project Thumbnail"
-  width={600}
-  height={400}
-  className="object-cover rounded-lg"
-/>
-```
-
-Remember to optimize your images for web use to ensure fast loading times.
-
-## Customizing Content
-
-To customize the content of your portfolio:
-
-1. Edit the components in the \`app/components\` directory.
-2. Update the data in each component to reflect your personal information, projects, and experiences.
-3. Modify the styling in the component files or in \`app/globals.css\` to match your preferred design.
-
-## 🚀 Deployment
-
-This project uses a fully automated deployment pipeline with Gitea Actions, Docker, and Watchtower.
-
-### CI/CD Pipeline
-
-The deployment process is automated through `.gitea/workflows/release.yml`:
-
-```yaml
-name: Build and Release
-run-name: ${{ gitea.actor }} has triggered Build and Release 🚀
-on: [push]
-# ... (rest of the workflow file)
-```
-
-The workflow:
-
-1. Builds the Next.js application
-2. Creates a Docker image
-3. Pushes the image to a private registry running on the server in a docker container
-
-### Automatic Updates
-
-The production environment uses Docker Compose with Watchtower for automatic updates:
-
-```yaml
-services:
-  personal-website:
-    image: registry:5000/sam/personal-website:latest
-    container_name: personal-website
-    restart: unless-stopped
-    ports:
-      - '3000:3000'
-    labels:
-      - 'com.centurylinklabs.watchtower.enable=true'
-
-  watchtower:
-    image: containrrr/watchtower
-    container_name: watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    environment:
-      - WATCHTOWER_CLEANUP=true
-      - WATCHTOWER_LABEL_ENABLE=true
-      - WATCHTOWER_POLL_INTERVAL=30
-```
-
-When changes are pushed to the main branch:
-
-1. Gitea Actions builds and pushes a new Docker image
-2. Watchtower detects the new image
-3. The website container is automatically updated
-4. Zero-downtime deployment ensures smooth updates
-
-### Manual Deployment
-
-For manual builds and deployment:
+Requires Node.js 20.9 or newer (CI and the Docker image use Node 22).
 
 ```bash
-# Build the project
-npm run build
-
-# Build Docker image
-docker buildx build -t personal-website:latest .
-
-# Run the container
-docker run -p 3000:3000 personal-website:latest
+npm install
+npm run dev
 ```
 
-The static output will be in the 'out' directory for direct hosting if needed.
+The dev server runs at http://localhost:3064.
+
+## Scripts
+
+| Command            | Description                                      |
+| ------------------ | ------------------------------------------------ |
+| `npm run dev`      | Start the development server on port 3064        |
+| `npm run build`    | Create a production build (standalone output)    |
+| `npm run start`    | Serve the production build on port 3064          |
+| `npm run lint`     | Run ESLint                                       |
+| `npm run lint:fix` | Run ESLint and fix what it can                   |
+| `npm run format`   | Format the codebase with Prettier                |
+
+## Project Structure
+
+```
+app/
+  components/
+    header.tsx           Name, photo, and social links
+    resume/              Experience timeline, education, skills, and projects
+    personal/            Photo gallery, books, podcasts, and videos
+  common/                Shared data (skill tag colors)
+  terms/                 Terms of service page
+  globals.css            Tailwind setup and theme variables
+components/              Shared UI components and the animated background
+contexts/                React context for the image popup
+public/images/           Images, grouped by section
+```
+
+## Updating Content
+
+Most content lives as data at the top of its component:
+
+- **Experience:** `app/components/resume/timeline/jobs.tsx`
+- **Education:** `app/components/resume/timeline/education.tsx`
+- **Skills:** `app/components/resume/timeline/skills.tsx`
+- **Projects:** `app/components/resume/projects/projects.tsx`
+- **Interests and gallery:** `app/components/personal/`
+
+Images go in the matching folder under `public/images/` and are referenced by path, e.g.
+`/images/resume/netflix.png`.
+
+## Deployment
+
+On every push to `main`, the Gitea Actions workflow (`.gitea/workflows/release.yml`) installs
+dependencies and runs a production build to confirm the site still compiles.
+
+The app builds as a [standalone](https://nextjs.org/docs/app/api-reference/config/next-config-js/output)
+Next.js server and ships with a multi-stage `Dockerfile`:
+
+```bash
+docker build -t personal-website .
+docker run -p 3000:3000 personal-website
+```
+
+The container serves the site on port 3000.
+
+## License
+
+Copyright © 2025-2026 Sam McAnelly. All rights reserved. This code and its content are proprietary;
+see [LICENSE](LICENSE) for details.
