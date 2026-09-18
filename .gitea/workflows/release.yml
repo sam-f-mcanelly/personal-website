@@ -39,19 +39,3 @@ jobs:
       - name: 🔧 Build application
         run: |
           npm run build
-      - name: ⚙️ Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-        with:
-          driver-opts: |
-            network=umbrel_main_network
-          config-inline: |
-            [registry."umbrel-docker-registry:5000"]
-              http=true
-              insecure=true
-      - name: 🔧 Build and Push Docker Image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: umbrel-docker-registry:5000/sam/personal-website:latest
