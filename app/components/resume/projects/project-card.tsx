@@ -30,7 +30,7 @@ export default function ProjectCard({ title, description, image, links, tags }: 
   };
 
   return (
-    <Card className="overflow-hidden bg-black/60 backdrop-blur-xs transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]">
+    <Card className="overflow-hidden bg-black/60 backdrop-blur-xs transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02] text-foreground">
       <div className="relative h-40">
         <Image src={
           image || '/images/placeholder.svg'} 
