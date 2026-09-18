@@ -8,8 +8,9 @@ import LiveBackground from '@/components/live-background';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Sam McAnelly - Full Stack Developer',
-  description: 'Full stack developer portfolio showcasing projects and skills',
+  title: 'Sam McAnelly - Senior Software Engineer',
+  description:
+    'Senior Software Engineer at Netflix, delivering new content experiences end to end across distributed systems.',
   icons: {
     icon: 'favicon.ico',
   },

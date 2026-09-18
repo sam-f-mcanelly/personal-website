@@ -46,6 +46,7 @@ export const skillToColor = {
     'Sovereign Computing': 'green',
     'Event-Driven Architecture': 'green',
     'Distributed Systems': 'green',
+    'Platform Engineering': 'green',
   } as const;
   
   export type Skill = keyof typeof skillToColor;

@@ -21,9 +21,10 @@ export default function Header() {
             <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl/none text-neutral-heading">
               Sam McAnelly
             </h1>
-            <p className="text-neutral-subheading text-sm md:text-base max-w-md">
-              Software Development Engineer with a focus on scalable, serverless solutions and
-              infrastructure as code.
+            <p className="text-neutral-subheading text-sm md:text-base max-w-xl">
+              Senior Software Engineer at Netflix, working across the org&apos;s distributed systems
+              to deliver new content experiences end to end, with a view of how each piece serves
+              the broader business.
             </p>
             <div className="flex justify-center md:justify-start gap-4 mt-4">
               <Link

@@ -32,13 +32,14 @@ const skillCategories: SkillCategory[] = [
   {
     title: 'Areas of Focus',
     skills: [
-      'Infrastructure as Code',
+      'Distributed Systems',
+      'Platform Engineering',
       'Back-end (Ktor, RPC, REST)',
-      'Serverless',
       'Scalability',
-      'Sovereign Computing',
       'Event-Driven Architecture',
-      'Distributed Systems'
+      'Sovereign Computing',
+      'Infrastructure as Code',
+      'Serverless',
     ] as Skill[],
   },
 ];
