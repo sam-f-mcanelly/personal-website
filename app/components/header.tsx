@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin } from '@/components/icons';
 
 export default function Header() {
   return (

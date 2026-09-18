@@ -44,7 +44,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title = "Gallery" }
   }, [handleScroll])
 
   return (
-    <div className="bg-black/60 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl dark:border-slate-800">
+    <div className="bg-black/60 backdrop-blur-xs rounded-lg p-6 shadow-lg border border-neutral-accent/30 transition-all duration-300 ease-in-out hover:bg-black/80 hover:border-neutral-accent/50 hover:shadow-xl dark:border-slate-800">
       <h2 className="text-3xl font-bold mb-6 text-neutral-heading">{title}</h2>
       <div className="relative">
         <div
@@ -53,10 +53,10 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title = "Gallery" }
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {images.map((src, index) => (
-            <div key={index} className="flex-shrink-0 w-80 h-60 mr-4 snap-start">
+            <div key={index} className="shrink-0 w-80 h-60 mr-4 snap-start">
               <button
                 onClick={() => openPopup(src)}
-                className="w-full h-full focus:outline-none focus:ring-2 focus:ring-neutral-accent rounded-lg overflow-hidden"
+                className="w-full h-full focus:outline-hidden focus:ring-2 focus:ring-neutral-accent rounded-lg overflow-hidden"
               >
                 <Image
                   src={src || "/placeholder.svg"}
@@ -74,7 +74,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title = "Gallery" }
         {showLeftChevron && (
           <button
             onClick={() => scroll("left")}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-accent"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors duration-200 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-neutral-accent"
             aria-label="Scroll left"
           >
             <ChevronLeft size={24} />
@@ -83,7 +83,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title = "Gallery" }
         {showRightChevron && (
           <button
             onClick={() => scroll("right")}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-accent"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors duration-200 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-neutral-accent"
             aria-label="Scroll right"
           >
             <ChevronRight size={24} />

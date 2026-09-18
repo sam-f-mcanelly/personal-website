@@ -1,5 +1,5 @@
-# Use Node.js 18 Alpine as the base image for a smaller footprint
-FROM node:18-alpine AS builder
+# Use Node.js 22 Alpine as the base image for a smaller footprint
+FROM node:22-alpine AS builder
 
 # Set the working directory
 WORKDIR /app
@@ -20,7 +20,7 @@ COPY . .
 RUN npm run build
 
 # Production image, copy all files and run next
-FROM node:18-alpine AS runner
+FROM node:22-alpine AS runner
 
 WORKDIR /app
 

@@ -52,7 +52,7 @@ export default function Skills() {
           return (
             <div
               key={category.title}
-              className={`bg-black/60 backdrop-blur-sm p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]`}
+              className={`bg-black/60 backdrop-blur-xs p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]`}
             >
               <h3 className="text-lg font-semibold mb-2 text-neutral-heading">
                 {category.title}

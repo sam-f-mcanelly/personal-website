@@ -15,7 +15,7 @@ export default function YouTubeCard({
   videoLink,
 }: YouTubeCardProps) {
   return (
-    <div className="bg-black/60 backdrop-blur-sm rounded-lg overflow-hidden transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]">
+    <div className="bg-black/60 backdrop-blur-xs rounded-lg overflow-hidden transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]">
       <div className="relative">
         <Image
           src={thumbnailUrl || '/placeholder.svg'}

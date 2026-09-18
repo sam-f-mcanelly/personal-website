@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Github } from 'lucide-react';
+import { Github } from '@/components/icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Color, Skill, skillToColor } from '../../../common/skill-colors';
@@ -30,7 +30,7 @@ export default function ProjectCard({ title, description, image, links, tags }: 
   };
 
   return (
-    <Card className="overflow-hidden bg-black/60 backdrop-blur-sm transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02] text-opacity-100">
+    <Card className="overflow-hidden bg-black/60 backdrop-blur-xs transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]">
       <div className="relative h-40">
         <Image src={
           image || '/images/placeholder.svg'} 

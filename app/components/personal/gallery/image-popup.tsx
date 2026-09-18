@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useEffect, useCallback, useState } from "react"
+import { useEffect, useCallback } from "react"
 import Image from "next/image"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import { usePopup } from "@/contexts/popup-context"
@@ -9,16 +9,15 @@ import { useSwipeable } from 'react-swipeable'
 
 const ImagePopup: React.FC<{ images: string[] }> = ({ images }) => {
   const { selectedImage, closePopup, openPopup } = usePopup()
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const currentIndex = selectedImage ? Math.max(images.indexOf(selectedImage), 0) : 0
 
-  useEffect(() => {
-    if (selectedImage) {
-      const index = images.indexOf(selectedImage)
-      if (index !== -1) {
-        setCurrentIndex(index)
-      }
-    }
-  }, [selectedImage, images])
+  const navigateImage = useCallback(
+    (direction: "prev" | "next") => {
+      const offset = direction === "prev" ? -1 : 1
+      openPopup(images[(currentIndex + offset + images.length) % images.length])
+    },
+    [currentIndex, images, openPopup],
+  )
 
   const handleKeyDown = useCallback(
     (event: KeyboardEvent) => {
@@ -30,7 +29,7 @@ const ImagePopup: React.FC<{ images: string[] }> = ({ images }) => {
         navigateImage("next")
       }
     },
-    [closePopup],
+    [closePopup, navigateImage],
   )
 
   useEffect(() => {
@@ -39,18 +38,6 @@ const ImagePopup: React.FC<{ images: string[] }> = ({ images }) => {
       document.removeEventListener("keydown", handleKeyDown)
     }
   }, [handleKeyDown])
-
-  const navigateImage = (direction: "prev" | "next") => {
-    if (direction === "prev") {
-      const newIndex = (currentIndex - 1 + images.length) % images.length
-      openPopup(images[newIndex])
-      setCurrentIndex(newIndex)
-    } else {
-      const newIndex = (currentIndex + 1) % images.length
-      openPopup(images[newIndex])
-      setCurrentIndex(newIndex)
-    }
-  }
 
   // Configure swipe handlers
   const swipeHandlers = useSwipeable({
@@ -64,11 +51,11 @@ const ImagePopup: React.FC<{ images: string[] }> = ({ images }) => {
   if (!selectedImage) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-xs">
       <div className="relative max-w-4xl max-h-[90vh] w-full mx-4">
         <button
           onClick={closePopup}
-          className="absolute -top-10 right-0 text-white hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-white"
+          className="absolute -top-10 right-0 text-white hover:text-gray-300 focus:outline-hidden focus:ring-2 focus:ring-white"
           aria-label="Close popup"
         >
           <X size={24} />
@@ -90,14 +77,14 @@ const ImagePopup: React.FC<{ images: string[] }> = ({ images }) => {
           />
           <button
             onClick={() => navigateImage("prev")}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-accent"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors duration-200 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-neutral-accent"
             aria-label="Previous image"
           >
             <ChevronLeft size={24} />
           </button>
           <button
             onClick={() => navigateImage("next")}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-accent"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors duration-200 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-neutral-accent"
             aria-label="Next image"
           >
             <ChevronRight size={24} />

@@ -15,7 +15,7 @@ export default function AmazonBookCard({
   amazonLink,
 }: AmazonBookCardProps) {
   return (
-    <div className="flex flex-col items-center bg-black/60 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]">
+    <div className="flex flex-col items-center bg-black/60 backdrop-blur-xs rounded-lg p-4 transition-all duration-300 ease-in-out hover:bg-black/80 hover:shadow-xl hover:scale-[1.02]">
       <div className="relative w-32 h-auto mb-4">
         <Image
           src={imageUrl || '/placeholder.svg'}
