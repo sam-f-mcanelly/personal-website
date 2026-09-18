@@ -7,7 +7,11 @@ const experienceItems = [
     title: 'Netflix',
     role: 'Senior Software Engineer',
     icon: '/images/resume/netflix.png',
-    description: ['Netflix Live Streaming'],
+    description: [
+      'Led design and implementation of the Netflix end of playback experience on a new platform that serves the Netflix UI. This includes recommendations, title overrides, special handling for sensitive content, and the baseline next episode experience',
+      'The end of playback page has a failure rate below 0.0001% while serving 6k RPS. This is accomplished through utilizing redundant fallback handlers, optimized best trailer selection algorithm, and batched network calls',
+      'Expanded a DSL that is used to configure the business rules of the Netflix UI so that engineers can configure buttons and actions across Netflix pages. The feature reduced the investigation time for button and countdown configurations from several hours to less than five minutes',
+    ],
   },
   {
     startDate: 'Oct 2021',
