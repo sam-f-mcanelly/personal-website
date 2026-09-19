@@ -161,3 +161,22 @@
     overflow: hidden;
   }
 }
+
+/* Chart tokens for blog post charts. The site is dark-only; the series and ordinal
+   steps were validated for CVD separation and contrast against --viz-surface. */
+@layer base {
+  .viz {
+    --viz-surface: #070a12;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --ordinal-1: #184f95;
+    --ordinal-2: #256abf;
+    --ordinal-3: #3987e5;
+    --ordinal-4: #86b6ef;
+    --ink-secondary: #c3c2b7;
+    --ink-muted: #898781;
+    --grid: rgb(255 255 255 / 0.06);
+    --axis: rgb(255 255 255 / 0.2);
+  }
+}

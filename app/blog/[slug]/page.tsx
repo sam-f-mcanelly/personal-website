@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
+import Chart from '@/components/blog/charts';
 import { formatDate, getAllPosts, getPost } from '@/lib/blog';
 
 type Props = { params: Promise<{ slug: string }> };
@@ -27,7 +28,7 @@ export default async function BlogPost({ params }: Props) {
   if (!post) notFound();
 
   return (
-    <main className="container px-4 md:px-6 py-6 max-w-3xl relative z-10">
+    <main className="container px-4 md:px-6 py-6 relative z-10">
       <Link
         href="/blog"
         className="inline-flex items-center gap-1 text-sm text-neutral-accent hover:text-neutral-heading transition-colors"
@@ -36,8 +37,8 @@ export default async function BlogPost({ params }: Props) {
         All posts
       </Link>
 
-      <article className="mt-6 rounded-lg border bg-black/60 backdrop-blur-xs p-6 md:p-10">
-        <header className="mb-8">
+      <article className="mt-4 rounded-lg border bg-black/60 backdrop-blur-xs p-4 md:p-6">
+        <header className="mb-6">
           <time dateTime={post.date} className="text-sm text-neutral-accent">
             {formatDate(post.date)}
           </time>
@@ -45,10 +46,17 @@ export default async function BlogPost({ params }: Props) {
             {post.title}
           </h1>
         </header>
-        <div
-          className="prose prose-invert max-w-none prose-a:text-sky-400 prose-pre:bg-black/60"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        {post.blocks.map((block, i) =>
+          block.type === 'chart' ? (
+            <Chart key={i} spec={post.charts[block.id]} />
+          ) : (
+            <div
+              key={i}
+              className="prose prose-invert max-w-none prose-a:text-sky-400 prose-pre:bg-black/60 prose-code:before:content-none prose-code:after:content-none"
+              dangerouslySetInnerHTML={{ __html: block.html }}
+            />
+          )
+        )}
       </article>
     </main>
   );

@@ -12,7 +12,7 @@ export default function BlogIndex() {
   const posts = getAllPosts();
 
   return (
-    <main className="container px-4 md:px-6 py-6 max-w-3xl relative z-10">
+    <main className="container px-4 md:px-6 py-6 relative z-10">
       <h1 className="text-3xl font-bold mb-6 text-neutral-heading">Blog</h1>
 
       {posts.length === 0 ? (

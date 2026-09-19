@@ -1,0 +1,398 @@
+{
+  "window": {
+    "from": "2026-09-16T01:50:25Z",
+    "to": "2026-09-19T00:08:13Z"
+  },
+  "charts": {
+    "stats": {
+      "type": "stats",
+      "items": [
+        {
+          "label": "Commits on main",
+          "value": 81
+        },
+        {
+          "label": "Pushes",
+          "value": 145
+        },
+        {
+          "label": "Pull requests merged",
+          "value": 21
+        },
+        {
+          "label": "Pull request comments",
+          "value": 145
+        },
+        {
+          "label": "Lines of code",
+          "value": 17005
+        }
+      ]
+    },
+    "pushes": {
+      "type": "columns",
+      "title": "Pushes per 3 hours",
+      "subtitle": "Pushes to the Gitea repository, by account. Times in UTC.",
+      "x": [
+        "2026-09-16T00:00:00.000Z",
+        "2026-09-16T03:00:00.000Z",
+        "2026-09-16T06:00:00.000Z",
+        "2026-09-16T09:00:00.000Z",
+        "2026-09-16T12:00:00.000Z",
+        "2026-09-16T15:00:00.000Z",
+        "2026-09-16T18:00:00.000Z",
+        "2026-09-16T21:00:00.000Z",
+        "2026-09-17T00:00:00.000Z",
+        "2026-09-17T03:00:00.000Z",
+        "2026-09-17T06:00:00.000Z",
+        "2026-09-17T09:00:00.000Z",
+        "2026-09-17T12:00:00.000Z",
+        "2026-09-17T15:00:00.000Z",
+        "2026-09-17T18:00:00.000Z",
+        "2026-09-17T21:00:00.000Z",
+        "2026-09-18T00:00:00.000Z",
+        "2026-09-18T03:00:00.000Z",
+        "2026-09-18T06:00:00.000Z",
+        "2026-09-18T09:00:00.000Z",
+        "2026-09-18T12:00:00.000Z",
+        "2026-09-18T15:00:00.000Z",
+        "2026-09-18T18:00:00.000Z",
+        "2026-09-18T21:00:00.000Z",
+        "2026-09-19T00:00:00.000Z"
+      ],
+      "xFormat": "datetime",
+      "series": [
+        {
+          "name": "wealth-tracker-bot (agents)",
+          "values": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 9, 12, 26, 1, 0, 0, 0, 54, 4, 7, 0]
+        },
+        {
+          "name": "sam (me)",
+          "values": [2, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 3, 10, 1, 0, 0, 0, 6, 1, 4, 1]
+        }
+      ]
+    },
+    "loc": {
+      "type": "lines",
+      "title": "Lines of code on main",
+      "subtitle": "Kotlin, TypeScript, CSS, and SQL, counted at each commit on main. Build scripts excluded.",
+      "x": [
+        "2026-09-16T02:49:11Z",
+        "2026-09-16T03:39:49Z",
+        "2026-09-16T03:41:20Z",
+        "2026-09-16T03:43:01Z",
+        "2026-09-16T03:48:26Z",
+        "2026-09-17T00:00:14Z",
+        "2026-09-17T00:03:47Z",
+        "2026-09-17T02:21:12Z",
+        "2026-09-17T02:29:42Z",
+        "2026-09-17T02:39:14Z",
+        "2026-09-17T02:50:31Z",
+        "2026-09-17T02:53:44Z",
+        "2026-09-17T17:03:24Z",
+        "2026-09-17T23:43:54Z",
+        "2026-09-17T23:44:24Z",
+        "2026-09-17T23:59:16Z",
+        "2026-09-18T01:03:44Z",
+        "2026-09-18T01:15:31Z",
+        "2026-09-18T01:24:08Z",
+        "2026-09-18T01:28:04Z",
+        "2026-09-18T01:37:19Z",
+        "2026-09-18T01:47:56Z",
+        "2026-09-18T02:04:54Z",
+        "2026-09-18T02:46:40Z",
+        "2026-09-18T03:19:16Z",
+        "2026-09-18T16:22:05Z",
+        "2026-09-18T16:30:54Z",
+        "2026-09-18T16:44:30Z",
+        "2026-09-18T17:00:53Z",
+        "2026-09-18T19:42:26Z",
+        "2026-09-18T22:23:03Z",
+        "2026-09-18T22:38:29Z",
+        "2026-09-18T23:31:46Z",
+        "2026-09-19T00:08:12Z"
+      ],
+      "series": [
+        {
+          "name": "Backend",
+          "values": [
+            850, 850, 850, 850, 850, 850, 850, 850, 850, 1394, 1394, 1394, 1394, 2026, 2026, 2026,
+            2079, 2079, 2079, 2079, 2853, 2853, 2869, 3586, 3586, 3614, 3614, 3614, 3614, 3614,
+            3711, 3760, 3760, 4050
+          ]
+        },
+        {
+          "name": "Frontend",
+          "values": [
+            55, 55, 55, 55, 55, 55, 55, 55, 55, 199, 199, 199, 199, 200, 200, 1451, 1451, 1451,
+            2262, 2262, 2306, 2343, 2343, 2343, 3483, 3483, 3483, 3483, 3483, 3483, 3509, 3509,
+            4126, 4128
+          ]
+        },
+        {
+          "name": "Tests",
+          "values": [
+            270, 270, 270, 270, 270, 270, 270, 270, 270, 537, 537, 537, 537, 1762, 1762, 2244, 2429,
+            2429, 2804, 2804, 3814, 3862, 4261, 5276, 5897, 6075, 6075, 6643, 6643, 6643, 6815,
+            7393, 7985, 8827
+          ]
+        }
+      ]
+    },
+    "prs": {
+      "type": "gantt",
+      "title": "Pull requests, open to close",
+      "subtitle": "Each row is one pull request. Probes were opened to record how Gitea behaves, then closed. Times in UTC.",
+      "series": ["Merged", "Probe (closed unmerged)"],
+      "rows": [
+        {
+          "label": "#1",
+          "title": "feat(web): API client, branded Money, and enforced front-end guardrails",
+          "start": "2026-09-17T18:16:19Z",
+          "end": "2026-09-18T01:24:09Z",
+          "series": 0
+        },
+        {
+          "label": "#2",
+          "title": "feat(accounts): accounts and tags CRUD, attributes, archive",
+          "start": "2026-09-17T18:18:10Z",
+          "end": "2026-09-17T23:43:55Z",
+          "series": 0
+        },
+        {
+          "label": "#3",
+          "title": "feat(web): design tokens and a generated ECharts theme",
+          "start": "2026-09-17T18:21:54Z",
+          "end": "2026-09-17T23:59:16Z",
+          "series": 0
+        },
+        {
+          "label": "#4",
+          "title": "fix(tracker): fall back to a PR review when issue comments are refused",
+          "start": "2026-09-17T18:25:08Z",
+          "end": "2026-09-17T23:44:24Z",
+          "series": 0
+        },
+        {
+          "label": "#5",
+          "title": "docs: write the test first for behaviour cards",
+          "start": "2026-09-17T23:51:10Z",
+          "end": "2026-09-18T01:15:31Z",
+          "series": 0
+        },
+        {
+          "label": "#6",
+          "title": "feat(manual-assets): dated value history with read-time staleness",
+          "start": "2026-09-18T00:00:28Z",
+          "end": "2026-09-18T01:37:19Z",
+          "series": 0
+        },
+        {
+          "label": "#7",
+          "title": "build(hygiene): Spotless + ktlint, detekt with size limits, Kover floor",
+          "start": "2026-09-18T00:17:47Z",
+          "end": "2026-09-18T01:03:44Z",
+          "series": 0
+        },
+        {
+          "label": "#8",
+          "title": "docs(tracker): restructuring cards run alone; a PR is only green in isolation",
+          "start": "2026-09-18T01:19:07Z",
+          "end": "2026-09-18T01:28:04Z",
+          "series": 0
+        },
+        {
+          "label": "#9",
+          "title": "fix(web): proxy /api in preview too, and say when the backend is simply not running",
+          "start": "2026-09-18T01:46:23Z",
+          "end": "2026-09-18T01:47:56Z",
+          "series": 0
+        },
+        {
+          "label": "#10",
+          "title": "test(integration): real module, real migrations, real SQLite, over HTTP",
+          "start": "2026-09-18T01:51:44Z",
+          "end": "2026-09-18T02:04:55Z",
+          "series": 0
+        },
+        {
+          "label": "#11",
+          "title": "feat(scheduler): daily snapshot at a configured local time, with catch-up",
+          "start": "2026-09-18T02:11:22Z",
+          "end": "2026-09-18T02:46:41Z",
+          "series": 0
+        },
+        {
+          "label": "#12",
+          "title": "feat(web): type scale, and a body font chosen by rendering",
+          "start": "2026-09-18T02:22:04Z",
+          "end": "2026-09-18T03:19:16Z",
+          "series": 0
+        },
+        {
+          "label": "#13",
+          "title": "fix(snapshot): record the account's tags on every snapshot line",
+          "start": "2026-09-18T16:17:39Z",
+          "end": "2026-09-18T16:22:06Z",
+          "series": 0
+        },
+        {
+          "label": "#14",
+          "title": "build(gradle): commit the Gradle 8.13 wrapper and run CI through it",
+          "start": "2026-09-18T16:17:42Z",
+          "end": "2026-09-18T16:30:55Z",
+          "series": 0
+        },
+        {
+          "label": "#15",
+          "title": "test(integration): accounts and tags behaviour suite",
+          "start": "2026-09-18T16:25:48Z",
+          "end": "2026-09-18T16:44:30Z",
+          "series": 0
+        },
+        {
+          "label": "#16",
+          "title": "PROBE behind",
+          "start": "2026-09-18T16:35:29Z",
+          "end": "2026-09-18T16:54:43Z",
+          "series": 1
+        },
+        {
+          "label": "#17",
+          "title": "PROBE conflict",
+          "start": "2026-09-18T16:35:29Z",
+          "end": "2026-09-18T16:54:44Z",
+          "series": 1
+        },
+        {
+          "label": "#18",
+          "title": "PROBE behind2",
+          "start": "2026-09-18T16:38:38Z",
+          "end": "2026-09-18T16:54:44Z",
+          "series": 1
+        },
+        {
+          "label": "#19",
+          "title": "docs(readme): rewrite the README and add an all-rights-reserved LICENSE",
+          "start": "2026-09-18T16:51:09Z",
+          "end": "2026-09-18T17:00:53Z",
+          "series": 0
+        },
+        {
+          "label": "#20",
+          "title": "ci(pr-flow): keep PRs current with main by rebase",
+          "start": "2026-09-18T16:51:12Z",
+          "end": "2026-09-18T19:42:27Z",
+          "series": 0
+        },
+        {
+          "label": "#21",
+          "title": "probe: approved (throwaway, tracker #109)",
+          "start": "2026-09-18T17:31:38Z",
+          "end": "2026-09-18T17:33:42Z",
+          "series": 1
+        },
+        {
+          "label": "#22",
+          "title": "probe: unapproved (throwaway, tracker #109)",
+          "start": "2026-09-18T17:31:39Z",
+          "end": "2026-09-18T17:33:42Z",
+          "series": 1
+        },
+        {
+          "label": "#23",
+          "title": "probe: reworked (throwaway, tracker #109)",
+          "start": "2026-09-18T17:31:40Z",
+          "end": "2026-09-18T17:33:42Z",
+          "series": 1
+        },
+        {
+          "label": "#24",
+          "title": "probe: conflict (throwaway, tracker #109)",
+          "start": "2026-09-18T17:32:28Z",
+          "end": "2026-09-18T17:33:43Z",
+          "series": 1
+        },
+        {
+          "label": "#25",
+          "title": "probe: conflict2 (throwaway, tracker #109)",
+          "start": "2026-09-18T17:32:52Z",
+          "end": "2026-09-18T17:33:43Z",
+          "series": 1
+        },
+        {
+          "label": "#26",
+          "title": "probe: chain (throwaway, tracker #109 round 3)",
+          "start": "2026-09-18T17:54:07Z",
+          "end": "2026-09-18T17:54:40Z",
+          "series": 1
+        },
+        {
+          "label": "#27",
+          "title": "probe: pushed (throwaway, tracker #109 round 3)",
+          "start": "2026-09-18T17:54:07Z",
+          "end": "2026-09-18T17:54:41Z",
+          "series": 1
+        },
+        {
+          "label": "#28",
+          "title": "probe: conflict (throwaway, tracker #109 round 3)",
+          "start": "2026-09-18T17:54:08Z",
+          "end": "2026-09-18T17:54:41Z",
+          "series": 1
+        },
+        {
+          "label": "#29",
+          "title": "feat(api): serve the category vocabularies at /api/meta/vocabularies",
+          "start": "2026-09-18T20:04:21Z",
+          "end": "2026-09-18T22:23:03Z",
+          "series": 0
+        },
+        {
+          "label": "#30",
+          "title": "test(integration): harness seams for a controllable clock and fake price sources",
+          "start": "2026-09-18T20:08:02Z",
+          "end": "2026-09-18T22:38:29Z",
+          "series": 0
+        },
+        {
+          "label": "#31",
+          "title": "feat(web): core display components Money, Delta, ConfidenceBadge, Figure",
+          "start": "2026-09-18T22:43:59Z",
+          "end": "2026-09-18T23:31:47Z",
+          "series": 0
+        },
+        {
+          "label": "#32",
+          "title": "feat(api): net worth summary with groups, tags, deltas and confidence",
+          "start": "2026-09-18T22:52:35Z",
+          "end": "2026-09-19T00:08:12Z",
+          "series": 0
+        }
+      ]
+    },
+    "board": {
+      "type": "bar",
+      "title": "Cards on the board",
+      "subtitle": "Snapshot of the Vikunja board taken for the pipeline README, 84 cards across 9 epics.",
+      "segments": [
+        {
+          "label": "Backlog",
+          "value": 50
+        },
+        {
+          "label": "Queued",
+          "value": 15
+        },
+        {
+          "label": "In flight",
+          "value": 7
+        },
+        {
+          "label": "Done",
+          "value": 12
+        }
+      ]
+    }
+  }
+}
